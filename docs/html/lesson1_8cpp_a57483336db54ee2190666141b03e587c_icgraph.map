@@ -1,0 +1,7 @@
+<map id="Dispatcher" name="Dispatcher">
+<area shape="rect" id="Node000001" title="Checks the linearity of the equation, sends it to the corresponding function, the output is the numbe..." alt="" coords="152,31,236,56"/>
+<area shape="rect" id="Node000002" href="$lesson1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Links: Inputer(), Dispatcher(), LineSolver(), Outputer(), IsZero(), SquareSolver()" alt="" coords="29,5,80,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="138,36,80,25,81,20,139,31"/>
+<area shape="rect" id="Node000003" href="$lesson1_8cpp.html#a58edcdaea8dce04f89076eeda15f81e5" title=" " alt="" coords="5,55,104,80"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="139,56,105,61,104,56,138,50"/>
+</map>

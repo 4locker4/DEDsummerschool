@@ -1,0 +1,13 @@
+<map id="UniversalTest" name="UniversalTest">
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,23,104,48"/>
+<area shape="rect" id="Node000002" href="$lesson1_8cpp.html#a57483336db54ee2190666141b03e587c" title="Checks the linearity of the equation, sends it to the corresponding function, the output is the numbe..." alt="" coords="152,23,236,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="104,33,138,33,138,38,104,38"/>
+<area shape="rect" id="Node000003" href="$lesson1_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8" title="Checks double error." alt="" coords="431,23,488,48"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="230,20,284,8,333,3,383,8,419,17,417,22,382,13,333,8,284,13,232,26"/>
+<area shape="rect" id="Node000004" href="$lesson1_8cpp.html#af84003d3bb5027b6fd0a397424cd941c" title="Solves a linear equation and gives the output number of roots." alt="" coords="293,23,374,48"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="236,33,279,33,279,38,236,38"/>
+<area shape="rect" id="Node000005" href="$lesson1_8cpp.html#a8edc4fa61fb814383859a502432261fc" title="Solves a quadratic equation and gives the output number of roots." alt="" coords="284,72,383,98"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="231,46,284,65,283,70,230,51"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="374,33,417,33,417,38,374,38"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="365,70,417,49,419,54,367,75"/>
+</map>

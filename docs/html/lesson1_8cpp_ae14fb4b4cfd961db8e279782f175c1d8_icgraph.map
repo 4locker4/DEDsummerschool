@@ -1,0 +1,15 @@
+<map id="IsZero" name="IsZero">
+<area shape="rect" id="Node000001" title="Checks double error." alt="" coords="431,31,488,56"/>
+<area shape="rect" id="Node000002" href="$lesson1_8cpp.html#a57483336db54ee2190666141b03e587c" title="Distributor for linear and quadratic equations." alt="" coords="152,31,236,56"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="417,30,382,21,333,16,284,21,232,33,230,28,284,15,333,10,383,15,419,25"/>
+<area shape="rect" id="Node000005" href="$lesson1_8cpp.html#af84003d3bb5027b6fd0a397424cd941c" title="Solves a linear equation and gives the output number of roots." alt="" coords="293,31,374,56"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="417,46,374,46,374,41,417,41"/>
+<area shape="rect" id="Node000006" href="$lesson1_8cpp.html#a8edc4fa61fb814383859a502432261fc" title="Solves a quadratic equation and gives the output number of roots." alt="" coords="284,80,383,105"/>
+<area shape="poly" id="edge6_Node000001_Node000006" title=" " alt="" coords="419,62,368,82,366,77,417,57"/>
+<area shape="rect" id="Node000003" href="$lesson1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Links: Inputer(), Dispatcher(), LineSolver(), Outputer(), IsZero(), SquareSolver()" alt="" coords="29,5,80,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="138,36,80,25,81,20,139,31"/>
+<area shape="rect" id="Node000004" href="$lesson1_8cpp.html#a58edcdaea8dce04f89076eeda15f81e5" title=" " alt="" coords="5,55,104,80"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="139,56,105,61,104,56,138,50"/>
+<area shape="poly" id="edge5_Node000005_Node000002" title=" " alt="" coords="279,46,236,46,236,41,279,41"/>
+<area shape="poly" id="edge7_Node000006_Node000002" title=" " alt="" coords="283,78,230,59,232,54,285,73"/>
+</map>
