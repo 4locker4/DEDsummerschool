@@ -1,0 +1,25 @@
+\doxysection{constants.\+h}
+\hypertarget{constants_8h_source}{}\label{constants_8h_source}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ CONSTANTS\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ CONSTANTS\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ EPSILON\ \ \ \ \ \ \ \ \ \ \ =\ 0.1e-\/10;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Погрешность\ double}}
+\DoxyCodeLine{00005\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ SS\_INFINITY\_ROOTS\ =\ -\/1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Константа\ для\ обозначения\ бесконечного\ количества\ корней\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ //\ Константа\ для\ обозначения\ одн}}
+\DoxyCodeLine{00006\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ZERO\_ROOTS\ \ \ \ \ \ \ \ =\ 0;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Константа\ для\ обозначения\ 0\ корней}}
+\DoxyCodeLine{00007\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ ONE\_ROOT\ \ \ \ \ \ \ \ \ \ =\ 1;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Константа\ для\ обозначения\ 1\ корня}}
+\DoxyCodeLine{00008\ \textcolor{keyword}{const}\ \textcolor{keywordtype}{int}\ TWO\_ROOTS\ \ \ \ \ \ \ \ \ =\ 2;\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Константа\ для\ обозначения\ 2\ корней}}
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ \textcolor{comment}{//-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00013\ \textcolor{keywordtype}{void}\ Inputer\ (\textcolor{keywordtype}{double}*\ a,\ \textcolor{keywordtype}{double}*\ b,\ \textcolor{keywordtype}{double}*\ c);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Ввод\ данных}}
+\DoxyCodeLine{00014\ \textcolor{keywordtype}{int}\ Dispatcher\ (\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2);\ }
+\DoxyCodeLine{00015\ \textcolor{keywordtype}{int}\ LineSolver(\textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2);}
+\DoxyCodeLine{00016\ \textcolor{keywordtype}{int}\ SquareSolver\ (\textcolor{keywordtype}{double}\ a,\ \textcolor{keywordtype}{double}\ b,\ \textcolor{keywordtype}{double}\ c,\ \textcolor{keywordtype}{double}*\ x1,\ \textcolor{keywordtype}{double}*\ x2);\ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Решение\ квадратного\ уравнения\ \ \ \ \ \ \ \ \ \ \ \ }}
+\DoxyCodeLine{00017\ \textcolor{keywordtype}{void}\ Outputer\ (\textcolor{keywordtype}{int}\ nRoots,\ \textcolor{keywordtype}{double}\ x1,\ \textcolor{keywordtype}{double}\ x2);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Вывод\ данных\ }}
+\DoxyCodeLine{00018\ \textcolor{keywordtype}{bool}\ IsZero\ (\textcolor{keywordtype}{double}\ val);\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \textcolor{comment}{//\ Проверка\ double\ погрешности}}
+\DoxyCodeLine{00019\ }
+\DoxyCodeLine{00020\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}

@@ -1,0 +1,168 @@
+\doxysection{lesson1.\+cpp File Reference}
+\hypertarget{lesson1_8cpp}{}\label{lesson1_8cpp}\index{lesson1.cpp@{lesson1.cpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$assert.\+h$>$}\newline
+{\ttfamily \#include "{}.\+vscode\textbackslash{}constants.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{lesson1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main}} ()
+\begin{DoxyCompactList}\small\item\em Основная функция \doxylink{lesson1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lesson1_8cpp_af8955b941bad4d8082ab8c55d6e06b6f}{Inputer}} (double \texorpdfstring{$\ast$}{*}a, double \texorpdfstring{$\ast$}{*}b, double \texorpdfstring{$\ast$}{*}c)
+\begin{DoxyCompactList}\small\item\em Производит ввод данных ~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lesson1_8cpp_a57483336db54ee2190666141b03e587c}{Dispatcher}} (double a, double b, double c, double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em Проверяет линейность уравнения, отправляет на выполнение соответствующей функции, на выход дает количество корней. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lesson1_8cpp_af84003d3bb5027b6fd0a397424cd941c}{Line\+Solver}} (double b, double c, double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em Решает линейное уравнение, на выход дает количество корней. ~\newline
+ \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{lesson1_8cpp_a8edc4fa61fb814383859a502432261fc}{Square\+Solver}} (double a, double b, double c, double \texorpdfstring{$\ast$}{*}x1, double \texorpdfstring{$\ast$}{*}x2)
+\begin{DoxyCompactList}\small\item\em Решает квадратное уравнение, на выход дает количество корней. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{lesson1_8cpp_ac02c64c15a367d580adca1bf8ff0d261}{Outputer}} (int roots\+Quantity, double x1, double x2)
+\begin{DoxyCompactList}\small\item\em Производит вывод. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{lesson1_8cpp_ae14fb4b4cfd961db8e279782f175c1d8}{Is\+Zero}} (double val)
+\begin{DoxyCompactList}\small\item\em Проверяет double погрешность. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Function Documentation}
+\Hypertarget{lesson1_8cpp_a57483336db54ee2190666141b03e587c}\index{lesson1.cpp@{lesson1.cpp}!Dispatcher@{Dispatcher}}
+\index{Dispatcher@{Dispatcher}!lesson1.cpp@{lesson1.cpp}}
+\doxysubsubsection{\texorpdfstring{Dispatcher()}{Dispatcher()}}
+{\footnotesize\ttfamily \label{lesson1_8cpp_a57483336db54ee2190666141b03e587c} 
+int Dispatcher (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет линейность уравнения, отправляет на выполнение соответствующей функции, на выход дает количество корней. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Коэффициент перед квадратным членом ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Коэффициент перед членом первой степени ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Свободный член уравнения \\
+\hline
+\mbox{\texttt{ in}}  & {\em x1} & Первый корень уравнения \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & Второй корень уравнения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{lesson1_8cpp_af8955b941bad4d8082ab8c55d6e06b6f}\index{lesson1.cpp@{lesson1.cpp}!Inputer@{Inputer}}
+\index{Inputer@{Inputer}!lesson1.cpp@{lesson1.cpp}}
+\doxysubsubsection{\texorpdfstring{Inputer()}{Inputer()}}
+{\footnotesize\ttfamily \label{lesson1_8cpp_af8955b941bad4d8082ab8c55d6e06b6f} 
+void Inputer (\begin{DoxyParamCaption}\item[{double \texorpdfstring{$\ast$}{*}}]{a}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{b}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Производит ввод данных ~\newline
+ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Коэффициент перед квадратным членом ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Коэффициент перед членом первой степени ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Свободный член уравнения ~\newline
+ \\
+\hline
+\end{DoxyParams}
+\Hypertarget{lesson1_8cpp_ae14fb4b4cfd961db8e279782f175c1d8}\index{lesson1.cpp@{lesson1.cpp}!IsZero@{IsZero}}
+\index{IsZero@{IsZero}!lesson1.cpp@{lesson1.cpp}}
+\doxysubsubsection{\texorpdfstring{IsZero()}{IsZero()}}
+{\footnotesize\ttfamily \label{lesson1_8cpp_ae14fb4b4cfd961db8e279782f175c1d8} 
+bool Is\+Zero (\begin{DoxyParamCaption}\item[{double}]{val}{}\end{DoxyParamCaption})}
+
+
+
+Проверяет double погрешность. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em val} & Значение входной double переменной \\
+\hline
+\end{DoxyParams}
+\Hypertarget{lesson1_8cpp_af84003d3bb5027b6fd0a397424cd941c}\index{lesson1.cpp@{lesson1.cpp}!LineSolver@{LineSolver}}
+\index{LineSolver@{LineSolver}!lesson1.cpp@{lesson1.cpp}}
+\doxysubsubsection{\texorpdfstring{LineSolver()}{LineSolver()}}
+{\footnotesize\ttfamily \label{lesson1_8cpp_af84003d3bb5027b6fd0a397424cd941c} 
+int Line\+Solver (\begin{DoxyParamCaption}\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Решает линейное уравнение, на выход дает количество корней. ~\newline
+ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em b} & Коэффициент перед членом первой степени ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Свободный член уравнения \\
+\hline
+\mbox{\texttt{ in}}  & {\em x1} & Первый корень уравнения \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & Второй корень уравнения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{lesson1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}\index{lesson1.cpp@{lesson1.cpp}!main@{main}}
+\index{main@{main}!lesson1.cpp@{lesson1.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{lesson1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4} 
+int main (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Основная функция \doxylink{lesson1_8cpp_ae66f6b31b5ad750f1fe042a706a4e3d4}{main()}. 
+
+Ссылки\+: \doxylink{lesson1_8cpp_af8955b941bad4d8082ab8c55d6e06b6f}{Inputer()}, \doxylink{lesson1_8cpp_a57483336db54ee2190666141b03e587c}{Dispatcher()}, \doxylink{lesson1_8cpp_af84003d3bb5027b6fd0a397424cd941c}{Line\+Solver()}, \doxylink{lesson1_8cpp_ac02c64c15a367d580adca1bf8ff0d261}{Outputer()}, \doxylink{lesson1_8cpp_ae14fb4b4cfd961db8e279782f175c1d8}{Is\+Zero()}, \doxylink{lesson1_8cpp_a8edc4fa61fb814383859a502432261fc}{Square\+Solver()} \Hypertarget{lesson1_8cpp_ac02c64c15a367d580adca1bf8ff0d261}\index{lesson1.cpp@{lesson1.cpp}!Outputer@{Outputer}}
+\index{Outputer@{Outputer}!lesson1.cpp@{lesson1.cpp}}
+\doxysubsubsection{\texorpdfstring{Outputer()}{Outputer()}}
+{\footnotesize\ttfamily \label{lesson1_8cpp_ac02c64c15a367d580adca1bf8ff0d261} 
+void Outputer (\begin{DoxyParamCaption}\item[{int}]{roots\+Quantity}{, }\item[{double}]{x1}{, }\item[{double}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Производит вывод. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em roots\+Quantity} & Количество корней уравнения \\
+\hline
+\mbox{\texttt{ out}}  & {\em x1} & Первый корень уравнения \\
+\hline
+\mbox{\texttt{ out}}  & {\em x2} & Второй корень уравнения \\
+\hline
+\end{DoxyParams}
+\Hypertarget{lesson1_8cpp_a8edc4fa61fb814383859a502432261fc}\index{lesson1.cpp@{lesson1.cpp}!SquareSolver@{SquareSolver}}
+\index{SquareSolver@{SquareSolver}!lesson1.cpp@{lesson1.cpp}}
+\doxysubsubsection{\texorpdfstring{SquareSolver()}{SquareSolver()}}
+{\footnotesize\ttfamily \label{lesson1_8cpp_a8edc4fa61fb814383859a502432261fc} 
+int Square\+Solver (\begin{DoxyParamCaption}\item[{double}]{a}{, }\item[{double}]{b}{, }\item[{double}]{c}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x1}{, }\item[{double \texorpdfstring{$\ast$}{*}}]{x2}{}\end{DoxyParamCaption})}
+
+
+
+Решает квадратное уравнение, на выход дает количество корней. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em a} & Коэффициент перед квадратным членом ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em b} & Коэффициент перед членом первой степени ~\newline
+ \\
+\hline
+\mbox{\texttt{ in}}  & {\em c} & Свободный член уравнения \\
+\hline
+\mbox{\texttt{ in}}  & {\em x1} & Первый корень уравнения \\
+\hline
+\mbox{\texttt{ in}}  & {\em x2} & Второй корень уравнения \\
+\hline
+\end{DoxyParams}
