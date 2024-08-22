@@ -1,4 +1,13 @@
-#include "C:\Users\eremc\.vscode\Tests\.vscode\c++\inc\Solvers.h"
+#include "..\inc\Solvers.h"
+
+void RunSolver (void)
+{
+    Inputer (&parameters);                                                                  // Gets equation coefficients
+
+    Dispatcher (parameters, &decision);                                                     // We get the number of roots
+
+    Outputer (decision);
+}
 
 /**
  * @brief Checks the linearity of the equation, sends it to the corresponding function,
@@ -10,20 +19,18 @@
  * \param [in] x2 Second root of the equation
  */
 
-int Dispatcher (double a, double b, double c, double* x1, double* x2)
+void Dispatcher (struct Coeficient parameters, struct Roots* decision)
 {
-    assert (isfinite (a));
-    assert (isfinite (b));
-    assert (isfinite (c));
+    assert (isfinite (parameters.a));
+    assert (isfinite (parameters.b));
+    assert (isfinite (parameters.c));
 
-    assert (x1 != x2);
-    assert (x1 != NULL);
-    assert (x2 != NULL);
+    assert (decision != NULL);
 
-    if (IsZero(a))
-        return LineSolver (b, c, x1, x2);
+    if (IsZero(parameters.a))
+        LineSolver (parameters, decision);
     else
-        return SquareSolver (a, b, c, x1, x2);
+        SquareSolver (parameters, decision);
 }
 
 /**
@@ -34,21 +41,22 @@ int Dispatcher (double a, double b, double c, double* x1, double* x2)
  * \param [in] x2 Second root of the equation
  */
 
-int LineSolver (double p, double q, double* x1, double* x2)
+void LineSolver (struct Coeficient parameters, struct Roots* decision)
 {
-    assert (isfinite (p));
-    assert (isfinite (q));
+    assert (isfinite (parameters.a));
+    assert (isfinite (parameters.b));
 
-    assert (x1 != x2);
-    assert (x1 != NULL);
-    assert (x2 != NULL);
+    assert (decision != NULL);
 
-    if (IsZero (p))                                                                   // If b == 0
-        return (IsZero(q))? SS_INFINITY_ROOTS : ZERO_ROOTS;
-    else                                                                              // If b != 0
+    if (IsZero (parameters.a))                                                                 
+        if (IsZero(parameters.b))
+            decision -> nRoots = SS_INFINITY_ROOTS;
+        else
+            decision -> nRoots = ZERO_ROOTS;
+    else                                                                              
     {
-        *x1 = *x2 = (-q / p);
-        return ONE_ROOT;
+        decision->x1 = decision->x2 = (-parameters.b / parameters.a);
+        decision->nRoots = ONE_ROOT;
     }
 }
 
@@ -61,39 +69,38 @@ int LineSolver (double p, double q, double* x1, double* x2)
  * \param [in] x2 Second root of the equation
  */
 
-int SquareSolver (double a, double b, double c, double* x1, double* x2)             // Returns the number of roots
+void SquareSolver (struct Coeficient parameters, struct Roots* decision)                                  // Returns the number of roots
 {
-    assert (isfinite (a));
-    assert (isfinite (b));
-    assert (isfinite (c));
+    assert (isfinite (parameters.a));
+    assert (isfinite (parameters.b));
+    assert (isfinite (parameters.c));
 
-    assert (x1 != x2);
-    assert (x1 != NULL);
-    assert (x2 != NULL);
+    assert (decision != NULL);
 
-    if (IsZero(c))                                                                  // If c == 0
+    if (IsZero (parameters.c))                                                               // If c == 0
     {
-        *x1 = 0;
-        *x2 = (-b / a);
-        return TWO_ROOTS;
+        decision -> x1 = 0;
+        decision -> x2 = (-parameters.b / parameters.a);
+        decision -> nRoots = TWO_ROOTS;
+        poshelazsrxdtfygtbuy.lp/;''
     }
 
-    double discriminant = b * b - 4 * a * c;                                        // Calculate the discriminant
+    double discriminant = parameters.b * parameters.b - 4 * parameters.a * parameters.c;    // Calculate the discriminant
 
-    if (discriminant <= 0)                                                          // Testing for non-negative discriminant
-        return ZERO_ROOTS;
+    if (discriminant <= -EPSILON)                                                           // Testing for non-negative discriminant
+        decision -> nRoots = ZERO_ROOTS;
 
-    double sqrtDiscriminant = sqrt(discriminant);                                   // Root of the discriminant
+    double sqrtDiscriminant = sqrt(discriminant);                                           // Root of the discriminant
 
-    if (IsZero(sqrtDiscriminant))                                                   // One root
+    if (IsZero(sqrtDiscriminant))                                                           // One root
     {
-        *x1 = *x2 = -b / (2 * a);
-        return ONE_ROOT;
+        decision -> x1 = decision -> x2 = (-parameters.b / parameters.a);
+        decision -> nRoots = ONE_ROOT;
     }
     else                                                                            // 2 roots, sqrt_discriminant > EPSILAN
     {
-        *x1 = (-b + sqrtDiscriminant) / (2 * a);                                    // First root
-        *x2 = (-b - sqrtDiscriminant) / (2 * a);                                    // Second root
-        return TWO_ROOTS;
+        decision -> x1 = (-parameters.b + sqrtDiscriminant) / (2 * parameters.a);                                    // First root
+        decision -> x2 = (-parameters.b - sqrtDiscriminant) / (2 * parameters.a);                                    // Second root
+        decision -> nRoots = TWO_ROOTS;
     }
 }

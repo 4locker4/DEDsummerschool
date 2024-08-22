@@ -1,6 +1,6 @@
 ///@file Tests.cpp
 
-#include "C:\Users\eremc\.vscode\Tests\.vscode\c++\inc\Tests.h"
+#include "..\inc\Tests.h"
 
 /**
  * @brief Function for unit tests
@@ -20,7 +20,7 @@ int UniversalTest (int numTest, double a, double b, double c,                   
 
     int nRoots = Dispatcher (a, b, c, &x1, &x2);
 
-    if (DoubleComparison (nRoots, nRootsRequired) ||  //
+    if (DoubleComparison (nRoots, nRootsRequired) ||
         DoubleComparison (x1, x1Required) ||
         DoubleComparison (x2, x2Required))
     {

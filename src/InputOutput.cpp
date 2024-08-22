@@ -1,6 +1,6 @@
 ///@file InputOutput.cpp
 
-#include "C:\Users\eremc\.vscode\Tests\.vscode\c++\inc\InputOutput.h"
+#include "..\inc\InputOutput.h"
 
 /**
  * @brief Performs data entry
@@ -9,17 +9,19 @@
  * \param [in] c Free term of the equation
  */
 
-void Inputer (double* a, double* b, double* c)                                       // Data entry
+void Inputer (Coeficient* parameters)                                       // Data entry
 {
-    assert (a != NULL);
-    assert (b != NULL);
-    assert (c != NULL);
+    assert (parameters != NULL);
 
     printf ("Ваше уравнение имеет вид:\na * x ^ 2 + b * x + c\n");
     printf ("Введите коэффициенты уравнения.\n\n");
     printf ("A   B   C\n");
 
-    while (!VerifyItNum(a, b, c));
+    while (scanf ("%lg %lg %lg", parameters) != 3)
+    {
+        printf ("Oh no! You entered incorrect data.\n");
+        printf ("Please, put coefficients, not chars.");
+    }
 }
 
 /**
@@ -29,27 +31,26 @@ void Inputer (double* a, double* b, double* c)                                  
  * \param [in] x2 Second root of the equation
  */
 
-void Outputer (int rootsQuantity, double x1, double x2)                             // Data output
+void Outputer (Roots decision)                             // Data output
 {
-    assert (isfinite (x1));
-    assert (isfinite (x2));
+    assert (isfinite (decision.x1));
+    assert (isfinite (decision.x2));
 
-    switch (rootsQuantity)
+    switch (decision.nRoots)
     {
         case ZERO_ROOTS:                                                            // If there are no roots
-
         {
             printf ("No roots!");
             break;
         }
         case ONE_ROOT:                                                              // One root
         {
-            printf ("x = %g", x1);
+            printf ("x = %g", decision.x1);
             break;
         }
         case TWO_ROOTS:                                                             // Two roots
         {
-            printf ("x1 = %lg, x2 = %lg", x1, x2);
+            printf ("x1 = %lg, x2 = %lg", decision.x1, decision.x2);
             break;
         }
         case SS_INFINITY_ROOTS:                                                     // Infinite number of roots
@@ -60,7 +61,7 @@ void Outputer (int rootsQuantity, double x1, double x2)                         
 
         default:                                                                    // Something went wrong; no roots like 0/1/2/INF
         {
-            printf ("main (): ERROR, there is %d roots://", rootsQuantity);
+            printf ("main (): ERROR, there is %d roots://", decision.nRoots);
             break;
         }
     }

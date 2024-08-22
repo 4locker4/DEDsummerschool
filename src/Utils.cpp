@@ -1,10 +1,10 @@
 ///@file IsZero.cpp
 
-#include "C:\Users\eremc\.vscode\Tests\.vscode\c++\inc\Utils.h"
+#include "..\inc\Utils.h"
 
 /**
  * @brief Checks double error.
- * \param [in] val Value of the input double variable
+ * @param[in] val Value of the input double variable
  */
 
 bool IsZero (double val)                                                            // Checking double for errors
@@ -18,20 +18,19 @@ bool IsZero (double val)                                                        
 
 bool DoubleComparison (double firstNum, double secondNum)                           // Compare two double
 {
-    if (fabs(firstNum - secondNum) >= EPSILON)
-        return false;
-    return true;
+    assert (isfinite (firstNum));
+    assert (isfinite (secondNum));
+
+    return IsZero (firstNum - secondNum);
 }
 
-bool VerifyItNum (double* a, double* b, double* c)
+/**
+ * @brief Clean buffer
+ */
+
+void BufferCleaner ()
 {
-    int rightData = scanf ("%lg %lg %lg", a, b, c);
-
-    if (rightData == 3)
-        return true;
-    printf ("Oh no! You entered incorrect data.\n");
-    printf ("Please, put coefficients, not chars.");
-
+    int ch = 0;
     
-    return false;
+    while ((ch = getchar()) != EOF || ch != '\n');
 }
