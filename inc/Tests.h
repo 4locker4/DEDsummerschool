@@ -11,7 +11,7 @@
 #include "Solvers.h"
 #include "Utils.h"
 
-void StartTests         (void);
+void StartTests         ();
 int  UniversalTest      (int numTest, double a, double b, double c,                      ///< Unit-tests
                          int nRootsRequired, double x1Required, double x2Required);
 

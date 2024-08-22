@@ -10,6 +10,7 @@
 #include "Tests.h"
 
 void Menu ();
+void RunSolver();
 
 #endif // MENU_H
 

@@ -1,7 +1,10 @@
 #include "..\inc\Solvers.h"
 
-void RunSolver (void)
+void RunSolver ()
 {
+    Coeficient parameters {};
+    Roots decision {};
+
     Inputer (&parameters);                                                                  // Gets equation coefficients
 
     Dispatcher (parameters, &decision);                                                     // We get the number of roots
@@ -48,7 +51,7 @@ void LineSolver (struct Coeficient parameters, struct Roots* decision)
 
     assert (decision != NULL);
 
-    if (IsZero (parameters.a))                                                                 
+    if (IsZero (parameters.a))                                     
         if (IsZero(parameters.b))
             decision -> nRoots = SS_INFINITY_ROOTS;
         else
@@ -82,7 +85,7 @@ void SquareSolver (struct Coeficient parameters, struct Roots* decision)        
         decision -> x1 = 0;
         decision -> x2 = (-parameters.b / parameters.a);
         decision -> nRoots = TWO_ROOTS;
-        poshelazsrxdtfygtbuy.lp/;''
+        return;
     }
 
     double discriminant = parameters.b * parameters.b - 4 * parameters.a * parameters.c;    // Calculate the discriminant

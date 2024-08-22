@@ -15,14 +15,14 @@ struct Coeficient                                                               
     double a = 0;
     double b = 0; 
     double c = 0;
-} parameters;
+};
 
 struct Roots                                                                        // Roots
 {
     double x1 = 0;
     double x2 = 0;
-    int nRoots;
-} decision;
+    int nRoots = 0;
+};
 
 enum spectrum 
 {

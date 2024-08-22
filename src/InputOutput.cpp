@@ -9,7 +9,7 @@
  * \param [in] c Free term of the equation
  */
 
-void Inputer (Coeficient* parameters)                                       // Data entry
+void Inputer (struct Coeficient* parameters)                                       // Data entry
 {
     assert (parameters != NULL);
 
@@ -31,7 +31,7 @@ void Inputer (Coeficient* parameters)                                       // D
  * \param [in] x2 Second root of the equation
  */
 
-void Outputer (Roots decision)                             // Data output
+void Outputer (struct Roots decision)                             // Data output
 {
     assert (isfinite (decision.x1));
     assert (isfinite (decision.x2));
