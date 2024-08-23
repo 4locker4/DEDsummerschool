@@ -16,6 +16,12 @@ bool IsZero (double val)                                                        
     return false;
 }
 
+/**
+ * @brief Compearing two double nums
+ * \param [in] firstNum  First double num
+ * \param [in] secondNum Second double num
+ */
+
 bool DoubleComparison (double firstNum, double secondNum)                           // Compare two double
 {
     assert (isfinite (firstNum));
@@ -28,9 +34,14 @@ bool DoubleComparison (double firstNum, double secondNum)                       
  * @brief Clean buffer
  */
 
-void BufferCleaner ()
-{
-    int ch = 0;
-    
-    while ((ch = getchar()) != EOF || ch != '\n');
+void BufferCleaner ()                                                               // Clean Buffer
+{   
+    char ch;
+    while (true)
+    {
+        ch = getchar();
+        
+        if (ch == '\n' || ch == EOF)
+            break;
+    }
 }

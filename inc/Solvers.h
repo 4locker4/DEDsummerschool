@@ -10,18 +10,18 @@
 #include "Utils.h"
 #include "InputOutput.h"
 
-struct Coeficient                                                                   // Coefficients
+struct Coefficient                                                                   // Coefficients
 {
-    double a = 0;
-    double b = 0; 
-    double c = 0;
+    double a;
+    double b;
+    double c;
 };
 
 struct Roots                                                                        // Roots
 {
-    double x1 = 0;
-    double x2 = 0;
-    int nRoots = 0;
+    double x1;
+    double x2;
+    int nRoots;
 };
 
 enum spectrum 
@@ -32,11 +32,11 @@ enum spectrum
     SS_INFINITY_ROOTS = -1                                                          ///< Number of equation roots: 0 INFINITY
 };
 
-const int EPSILON           = 0.1e-10;                                              ///< Error constant double
+const double EPSILON = 1e-10;                                                        ///< Error constant double
 
-void Dispatcher   (struct Coeficient parameters, Roots* docision);                         ///< Distributor for linear and quadratic equations
-void LineSolver   (struct Coeficient parameters, Roots* dicision);                         ///< Solve linear equations
-void SquareSolver (struct Coeficient parameters, Roots* docision);                         ///< Solving a quadratic equation    
+void Dispatcher   (struct Coefficient parameters, struct Roots* docision);                  ///< Distributor for linear and quadratic equations
+void LineSolver   (double b, double c, struct Roots* dicision);                  ///< Solve linear equations
+void SquareSolver (struct Coefficient parameters, struct Roots* docision);                  ///< Solving a quadratic equation    
 void RunSolver    ();                                                               ///< Start soling
 
 #endif // SOLVERS_H

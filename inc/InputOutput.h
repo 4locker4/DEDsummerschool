@@ -9,7 +9,7 @@
 #include <assert.h>
 #include "Solvers.h"
      
-void Outputer (struct Roots decision);                                   ///< Data output
-void Inputer  (struct Coeficient* parameters) ;                                        ///< Data entry       
+void Outputer (struct Roots decision);                                                 ///< Data output
+void Inputer  (struct Coefficient* parameters) ;                                        ///< Data entry       
 
 #endif

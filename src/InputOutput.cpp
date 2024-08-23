@@ -9,29 +9,33 @@
  * \param [in] c Free term of the equation
  */
 
-void Inputer (struct Coeficient* parameters)                                       // Data entry
+void Inputer (struct Coefficient* parameters)                                        // Data entry
 {
     assert (parameters != NULL);
 
-    printf ("Ваше уравнение имеет вид:\na * x ^ 2 + b * x + c\n");
-    printf ("Введите коэффициенты уравнения.\n\n");
+    printf ("Your equation is:\na * x ^ 2 + b * x + c\n");
+    printf ("Enter the coefficients of the equation.\n\n");
     printf ("A   B   C\n");
 
-    while (scanf ("%lg %lg %lg", parameters) != 3)
+    while (scanf ("%lg %lg %lg", &parameters -> a, &parameters -> b, &parameters -> c) != 3)                                  // Check, what kind of data User input
     {
         printf ("Oh no! You entered incorrect data.\n");
-        printf ("Please, put coefficients, not chars.");
+        printf ("Please, put coefficients, not chars.\n");
+
+        BufferCleaner();                                                            // Clean Buffer
     }
+    
+    return;
 }
 
 /**
  * @brief Produces output.
  * \param [in] rootsQuantity Number of roots of the equation
- * \param [in] x1 First root of the equation
- * \param [in] x2 Second root of the equation
+ * \param [in] x1            First root of the equation
+ * \param [in] x2            Second root of the equation
  */
 
-void Outputer (struct Roots decision)                             // Data output
+void Outputer (struct Roots decision)                                               // Data output
 {
     assert (isfinite (decision.x1));
     assert (isfinite (decision.x2));
@@ -66,5 +70,3 @@ void Outputer (struct Roots decision)                             // Data output
         }
     }
 }
-
-

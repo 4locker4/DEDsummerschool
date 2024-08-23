@@ -11,8 +11,21 @@
 #include "Solvers.h"
 #include "Utils.h"
 
-void StartTests         ();
-int  UniversalTest      (int numTest, double a, double b, double c,                      ///< Unit-tests
-                         int nRootsRequired, double x1Required, double x2Required);
+const int QUANTITY = 6;
+
+struct TestRes
+{
+    struct Coefficient parameters;
+    struct Roots decision;
+};
+
+struct TestConst
+{
+    int nRoots;
+    double x1Required, x2Required;
+};
+
+void StartTests         ();                                                              ///< Start solving equation
+int  UniversalTest      (int testNum, struct Coefficient parameters, struct Roots decision);
 
 #endif

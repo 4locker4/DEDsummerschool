@@ -12,28 +12,26 @@
  * \param [in] x1Required       Expected first root of the equation
  * \param [in] x2Required       Expected second root of the equation
  */
-int UniversalTest (int numTest, double a, double b, double c,                       // Function for tests
-                   int nRootsRequired, double x1Required, double x2Required)
+int UniversalTest (int testNum, struct Coefficient parameters, struct Roots decision)
 {
-    double x1 = 0;
-    double x2 = 0;
+    TestConst expected = {decision.nRoots, decision.x1, decision.x2};
 
-    int nRoots = Dispatcher (a, b, c, &x1, &x2);
+    Dispatcher (parameters, &decision);
 
-    if (DoubleComparison (nRoots, nRootsRequired) ||
-        DoubleComparison (x1, x1Required) ||
-        DoubleComparison (x2, x2Required))
+    if (expected.nRoots != decision.nRoots ||
+        !DoubleComparison (expected.x1Required, decision.x1) ||
+        !DoubleComparison (expected.x2Required, decision.x2))
     {
-        printf ("ERROR, Test number %d/n", numTest);
-        printf ("Input Data: a = %lg, b = %lg, c = %lg\n", a, b, c);
-        printf ("Exprcted Data: x1 = %lg, x2 = %lg, nRoots = %lg\n", x1Required, x2Required, nRootsRequired);
-        printf ("Received Data: x1 = %lg, x2 = %lg, nRoots = %lg\n\n", x1, x2, nRoots);
+        printf ("ERROR, Test number %d/n", testNum);
+        printf ("Input Data: a = %lg, b = %lg, c = %lg\n", parameters.a, parameters.b, parameters.c);
+        printf ("Exprcted Data: x1 = %lg, x2 = %lg, nRoots = %d\n", expected.x1Required, expected.x2Required, expected.nRoots);
+        printf ("Received Data: x1 = %lg, x2 = %lg, nRoots = %ldn\n", decision.x1, decision.x2, decision.nRoots);
 
         return 0;
     }
     else
     {
-        printf ("Nice! Test number %d is fine!\n", numTest);
+        printf ("Nice! Test number %d is fine!\n", testNum);
         return 1;
     }
 }
@@ -47,12 +45,20 @@ void StartTests()                                                               
     int rightTests = 0;
     int falseTests = 6;
 
-    rightTests += UniversalTest (1, 1, 2, -3, 2, 1, -3);
-    rightTests += UniversalTest (2, 5, 0, 0, 1, 0, 0);
-    rightTests += UniversalTest (3, 0, 5, -3, 1, 0.6, 0.6);
-    rightTests += UniversalTest (4, 0.25, -25, 0, 2, 0, 100);
-    rightTests += UniversalTest (5, 0.1, 0.999, -0.01, 2, 0.01, -10);
-    rightTests += UniversalTest (6, -1, 66, -128, 2, 2, 64);
+    TestRes data[QUANTITY]
+    {
+        {{1, 2, -3}, {-3, 1, 2}},
+        {{5, 0, 0}, {0, 0, 1}},
+        {{0, 5, -3}, {0.6, 0.6, 1}},
+        {{0.25, -25, 0}, {100, 0, 2}},
+        {{0.1, 0.999, -0.01}, {-10, 0.01, 2}},
+        {{-1, 66, -128}, {64, 2, 2}}
+    };
+
+    for (int testNum = 0; testNum <= QUANTITY; testNum++)
+    {
+        UniversalTest (testNum, data[testNum].parameters, data[testNum].decision);
+    }
 
     printf ("\nThere are/is %d right test(s).\n", rightTests);
     printf ("There are/is %d wrong test(s).\n", (falseTests - rightTests));
