@@ -1,0 +1,18 @@
+<map id="StartTests" name="StartTests">
+<area shape="rect" id="Node000001" title="Function which include all data for tests." alt="" coords="5,77,88,102"/>
+<area shape="rect" id="Node000002" href="$_tests_8cpp.html#a360873b90ba8d7e36e0c30e22f163d0d" title="Function for unit tests." alt="" coords="136,77,235,102"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="88,87,122,87,122,92,88,92"/>
+<area shape="rect" id="Node000003" href="$_solvers_8cpp.html#a9b77476f35222eb1402899cece946abf" title="Distributor for linear and quadratic equations." alt="" coords="306,52,390,77"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="234,80,292,70,293,76,235,85"/>
+<area shape="rect" id="Node000007" href="$_utils_8cpp.html#ac3872ec796cbd8dee9a82a69d18d1aa1" title="Checking equality double." alt="" coords="283,101,413,126"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="235,94,269,99,268,105,234,100"/>
+<area shape="rect" id="Node000004" href="$_utils_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8" title="Double error check." alt="" coords="608,52,665,77"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="369,49,410,28,461,11,511,3,533,4,561,11,589,24,613,41,610,45,586,29,559,16,532,10,511,8,462,16,412,33,371,54"/>
+<area shape="rect" id="Node000005" href="$_solvers_8cpp.html#ab89686da8b60980a4a4c32644e50fb25" title="Solves a linear equation and gives the output number of roots." alt="" coords="470,26,551,52"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="390,55,456,45,457,50,391,61"/>
+<area shape="rect" id="Node000006" href="$_solvers_8cpp.html#aa750a50b5093ed0852ffcadcb1091988" title="Solves a quadratic equation and gives the output number of roots." alt="" coords="461,76,560,101"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="391,68,448,77,447,82,390,73"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="552,45,595,53,594,59,551,50"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="560,77,594,70,595,75,561,82"/>
+<area shape="poly" id="edge9_Node000007_Node000004" title=" " alt="" coords="413,121,485,123,523,119,559,111,586,99,609,84,612,88,588,104,561,116,523,124,485,128,413,126"/>
+</map>

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['headers_2eh_0',['Headers.h',['../_headers_8h.html',1,'']]]
+  ['c_0',['c',['../struct_coefficient.html#a2c09e929a6ea340fc9653cca414b11d3',1,'Coefficient']]],
+  ['coefficient_1',['Coefficient',['../struct_coefficient.html',1,'']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['outputer_0',['Outputer',['../_headers_8h.html#a197595478d63c1366c64293f0491e87b',1,'Outputer(int nRoots, double x1, double x2):&#160;lesson1.cpp'],['../lesson1_8cpp.html#ac02c64c15a367d580adca1bf8ff0d261',1,'Outputer(int rootsQuantity, double x1, double x2):&#160;lesson1.cpp']]]
+  ['main_0',['main',['../main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'main.cpp']]],
+  ['menu_1',['Menu',['../_menu_8h.html#afdf1ca9e7afc3e7ec41b47fea4b3d80d',1,'Menu():&#160;Menu.cpp'],['../_menu_8cpp.html#afdf1ca9e7afc3e7ec41b47fea4b3d80d',1,'Menu():&#160;Menu.cpp']]]
 ];

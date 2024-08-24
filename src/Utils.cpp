@@ -1,4 +1,4 @@
-///@file IsZero.cpp
+/// @file IsZero.cpp
 
 #include "..\inc\Utils.h"
 
@@ -36,12 +36,40 @@ bool DoubleComparison (double firstNum, double secondNum)                       
 
 void BufferCleaner ()                                                               // Clean Buffer
 {   
-    char ch;
+    int ch = 0;
+
+    while ((ch == getchar ()) != '\n' && ch != EOF){}
+}
+
+/**
+ * @brief Return what user want: test or put vals
+ */
+
+int TestOrPut ()
+{
+    int ch1 = 0;
+    int ch2 = 0;
+
     while (true)
-    {
-        ch = getchar();
+    {   
+        ch1 = getchar ();
+        ch2 = getchar ();
         
-        if (ch == '\n' || ch == EOF)
-            break;
+        if (ch1 == 't' && ch2 == '\n')
+        {
+            return TEST;
+        }
+        else if (ch1 == 'p' && ch2 == '\n')
+        {
+            return PUT;
+        }
+        else
+        {   
+            if (ch1 != '\n' && ch2 != '\n')
+            {
+                BufferCleaner();
+                printf ("Watch out! You input wrong data. Shut up and read Kernighan and Ritchie!!!\n");
+            }
+        }
     }
 }

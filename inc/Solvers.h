@@ -1,4 +1,4 @@
-///@file Solvers.h
+/// @file Solvers.h
 
 #ifndef SOLVERS_H
 #define SOLVERS_H
@@ -10,18 +10,18 @@
 #include "Utils.h"
 #include "InputOutput.h"
 
-struct Coefficient                                                                   // Coefficients
+struct Coefficient                                                                  ///< Coefficients
 {
-    double a;
-    double b;
-    double c;
+    double a;                                                                       ///< First coef
+    double b;                                                                       ///< Secord coef
+    double c;                                                                       ///< Third coef
 };
 
-struct Roots                                                                        // Roots
+struct Roots                                                                        ///< Roots
 {
-    double x1;
-    double x2;
-    int nRoots;
+    double x1;                                                                      ///< First root
+    double x2;                                                                      ///< Second root
+    int nRoots;                                                                     ///< Number of roots
 };
 
 enum spectrum 
@@ -32,11 +32,12 @@ enum spectrum
     SS_INFINITY_ROOTS = -1                                                          ///< Number of equation roots: 0 INFINITY
 };
 
-const double EPSILON = 1e-10;                                                        ///< Error constant double
+const double EPSILON = 1e-10;                                                       ///< Error constant double
 
-void Dispatcher   (struct Coefficient parameters, struct Roots* docision);                  ///< Distributor for linear and quadratic equations
-void LineSolver   (double b, double c, struct Roots* dicision);                  ///< Solve linear equations
-void SquareSolver (struct Coefficient parameters, struct Roots* docision);                  ///< Solving a quadratic equation    
+void Dispatcher   (struct Coefficient parameters, struct Roots* docision);          ///< Distributor for linear and quadratic equations
+void LineSolver   (double b, double c, struct Roots* dicision);                     ///< Solve linear equations
+void SquareSolver (struct Coefficient parameters, struct Roots* docision);          ///< Solving a quadratic equation    
 void RunSolver    ();                                                               ///< Start soling
+int TestOrPut     ();                                                               ///< Function, where User choose test or put
 
 #endif // SOLVERS_H

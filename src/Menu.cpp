@@ -1,4 +1,4 @@
-///@file Menu.cpp
+/// @file Menu.cpp
 
 #include "..\inc\Menu.h"
 
@@ -9,34 +9,14 @@
 void Menu ()
 {
     printf ("Hello! I'm Your programm. Choose, what do You want:\n\n");
-    printf ("[t\\p]\n\nt - Test me\np - Put Your's values\n");
+    printf ("[t\\p]\n\nt - Test me\np - Put Your's values\n\n");
 
-    int ch1, ch2; 
-
-    while (true)
-    {   
-        ch1 = getchar();
-        ch2 = getchar();
-        
-        if (ch2 == '\n')
-        {
-            if (ch1 != 't' && ch1 != 'p')
-            {
-                printf ("Take a look closer, You entered something wrong.\n\n");  
-                BufferCleaner ();
-            }
-            else
-                break;
-        }
-    }
-
-    if (ch1 == 't')
+    if (TestOrPut () == TEST)                                                    // User choose Test
     {
-        StartTests();
-        
+        StartTests ();
     }
-    else
+    else                                                                        // User choose Put vals
     {
-        RunSolver();
+        RunSolver ();
     }
 }

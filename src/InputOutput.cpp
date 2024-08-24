@@ -1,4 +1,4 @@
-///@file InputOutput.cpp
+/// @file InputOutput.cpp
 
 #include "..\inc\InputOutput.h"
 
@@ -17,7 +17,9 @@ void Inputer (struct Coefficient* parameters)                                   
     printf ("Enter the coefficients of the equation.\n\n");
     printf ("A   B   C\n");
 
-    while (scanf ("%lg %lg %lg", &parameters -> a, &parameters -> b, &parameters -> c) != 3)                                  // Check, what kind of data User input
+    while (scanf ("%lg %lg %lg", &parameters -> a,                                  // Check, what kind of data User input
+                                 &parameters -> b,
+                                 &parameters -> c) != 3)                                  
     {
         printf ("Oh no! You entered incorrect data.\n");
         printf ("Please, put coefficients, not chars.\n");

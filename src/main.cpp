@@ -3,13 +3,12 @@
 #include "..\inc\Menu.h"
 
 /**
- * @brief Links:  Inputer(), Dispatcher(), LineSolver(),
- *                Outputer(), IsZero(), SquareSolver()
+ * @brief Links: Main ()
  */
 
 int main ()
 {
-    Menu();
+    Menu ();
 
     return 0;
 }

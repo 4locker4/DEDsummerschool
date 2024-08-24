@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['epsilon_0',['EPSILON',['../_headers_8h.html#a9b34f013767a7f86c09f5c33fe4f98aa',1,'Headers.h']]]
+  ['b_0',['b',['../struct_coefficient.html#a1510a66dacf9cf3586de5fc89ae2a073',1,'Coefficient']]],
+  ['buffercleaner_1',['BufferCleaner',['../_utils_8h.html#a2d839c3cf3653b51aac9731768d51ff5',1,'BufferCleaner():&#160;Utils.cpp'],['../_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5',1,'BufferCleaner():&#160;Utils.cpp']]]
 ];

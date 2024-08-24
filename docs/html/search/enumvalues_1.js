@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['ss_5finfinity_5froots_0',['SS_INFINITY_ROOTS',['../_headers_8h.html#a494c3cfc9425b063fdaaa4027869d53daa447836367d1ec024028745a221f5ac2',1,'Headers.h']]]
+  ['put_0',['PUT',['../_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9',1,'Utils.h']]]
 ];
