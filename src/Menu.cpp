@@ -1,4 +1,4 @@
-///@file Menu.cpp
+/// @file Menu.cpp
 
 #include "..\inc\Menu.h"
 
@@ -30,13 +30,12 @@ void Menu ()
         }
     }
 
-    if (ch1 == 't')
+    if (TestOrPut () == TEST)                                                    // User choose Test
     {
-        StartTests();
-        
+        StartTests ();
     }
-    else
+    else                                                                        // User choose Put vals
     {
-        RunSolver();
+        RunSolver ();
     }
 }

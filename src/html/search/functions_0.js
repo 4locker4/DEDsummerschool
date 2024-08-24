@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dispatcher_0',['Dispatcher',['../lesson1_8cpp.html#a57483336db54ee2190666141b03e587c',1,'lesson1.cpp']]]
+  ['inputer_0',['Inputer',['../_input_output_8cpp.html#af8955b941bad4d8082ab8c55d6e06b6f',1,'InputOutput.cpp']]]
 ];

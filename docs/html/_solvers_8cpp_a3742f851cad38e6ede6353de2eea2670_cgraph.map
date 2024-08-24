@@ -1,0 +1,19 @@
+<map id="RunSolver" name="RunSolver">
+<area shape="rect" id="Node000001" title="Run Square Solver." alt="" coords="5,100,85,125"/>
+<area shape="rect" id="Node000002" href="$_solvers_8cpp.html#a9b77476f35222eb1402899cece946abf" title="Checks the linearity of the equation, sends it to the corresponding function, the output is the numbe..." alt="" coords="133,51,217,76"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="78,98,127,79,129,84,80,103"/>
+<area shape="rect" id="Node000006" href="$_input_output_8cpp.html#a3c9847eec45383250e7c728934b34bd4" title="Data entry" alt="" coords="145,100,206,125"/>
+<area shape="poly" id="edge7_Node000001_Node000006" title=" " alt="" coords="86,110,131,110,131,115,86,115"/>
+<area shape="rect" id="Node000008" href="$_input_output_8cpp.html#a7150983d90250a4b70279c7fbea12119" title="Data output." alt="" coords="139,149,211,175"/>
+<area shape="poly" id="edge9_Node000001_Node000008" title=" " alt="" coords="80,123,129,142,127,147,78,128"/>
+<area shape="rect" id="Node000003" href="$_utils_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8" title="Double error check." alt="" coords="412,25,469,51"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="192,48,224,27,265,10,314,3,365,10,400,19,399,25,363,15,314,9,266,15,227,32,195,53"/>
+<area shape="rect" id="Node000004" href="$_solvers_8cpp.html#ab89686da8b60980a4a4c32644e50fb25" title="Solves a linear equation and gives the output number of roots." alt="" coords="274,25,355,51"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="217,53,260,45,261,50,218,58"/>
+<area shape="rect" id="Node000005" href="$_solvers_8cpp.html#aa750a50b5093ed0852ffcadcb1091988" title="Solves a quadratic equation and gives the output number of roots." alt="" coords="265,75,364,100"/>
+<area shape="poly" id="edge5_Node000002_Node000005" title=" " alt="" coords="218,68,252,74,251,79,217,73"/>
+<area shape="poly" id="edge4_Node000004_Node000003" title=" " alt="" coords="355,35,398,35,398,41,355,41"/>
+<area shape="poly" id="edge6_Node000005_Node000003" title=" " alt="" coords="347,72,398,52,400,57,349,77"/>
+<area shape="rect" id="Node000007" href="$_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5" title="Buffer cleaner." alt="" coords="265,124,364,149"/>
+<area shape="poly" id="edge8_Node000006_Node000007" title=" " alt="" coords="207,115,252,123,251,128,206,121"/>
+</map>

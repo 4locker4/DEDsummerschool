@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['dispatcher_0',['Dispatcher',['../_headers_8h.html#a57483336db54ee2190666141b03e587c',1,'Dispatcher(double a, double b, double c, double *x1, double *x2):&#160;lesson1.cpp'],['../lesson1_8cpp.html#a57483336db54ee2190666141b03e587c',1,'Dispatcher(double a, double b, double c, double *x1, double *x2):&#160;lesson1.cpp']]]
+  ['buffercleaner_0',['BufferCleaner',['../_utils_8h.html#a2d839c3cf3653b51aac9731768d51ff5',1,'BufferCleaner():&#160;Utils.cpp'],['../_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5',1,'BufferCleaner():&#160;Utils.cpp']]]
 ];

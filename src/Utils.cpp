@@ -1,10 +1,10 @@
-///@file IsZero.cpp
+/// @file IsZero.cpp
 
-#include "C:\Users\eremc\.vscode\Tests\.vscode\c++\inc\Utils.h"
+#include "..\inc\Utils.h"
 
 /**
  * @brief Checks double error.
- * \param [in] val Value of the input double variable
+ * @param[in] val Value of the input double variable
  */
 
 bool IsZero (double val)                                                            // Checking double for errors
@@ -16,22 +16,60 @@ bool IsZero (double val)                                                        
     return false;
 }
 
+/**
+ * @brief Compearing two double nums
+ * \param [in] firstNum  First double num
+ * \param [in] secondNum Second double num
+ */
+
 bool DoubleComparison (double firstNum, double secondNum)                           // Compare two double
 {
-    if (fabs(firstNum - secondNum) >= EPSILON)
-        return false;
-    return true;
+    assert (isfinite (firstNum));
+    assert (isfinite (secondNum));
+
+    return IsZero (firstNum - secondNum);
 }
 
-bool VerifyItNum (double* a, double* b, double* c)
+/**
+ * @brief Clean buffer
+ */
+
+void BufferCleaner ()                                                               // Clean Buffer
+{   
+    int ch = 0;
+
+    while ((ch == getchar ()) != '\n' && ch != EOF){}
+}
+
+/**
+ * @brief Return what user want: test or put vals
+ */
+
+int TestOrPut ()
 {
-    int rightData = scanf ("%lg %lg %lg", a, b, c);
+    int ch1 = 0;
+    int ch2 = 0;
 
-    if (rightData == 3)
-        return true;
-    printf ("Oh no! You entered incorrect data.\n");
-    printf ("Please, put coefficients, not chars.");
-
-    
-    return false;
+    while (true)
+    {   
+        ch1 = getchar ();
+        ch2 = getchar ();
+        
+        if (ch1 == 't' && ch2 == '\n')
+        {
+            return TEST;
+        }
+        else if (ch1 == 'p' && ch2 == '\n')
+        {
+            return PUT;
+        }
+        else
+        {   
+            if (ch1 != '\n' && ch2 != '\n')
+            {
+                BufferCleaner();
+                printf ("Watch out! You input wrong data. Shut up and read Kernighan and Ritchie!!!\n");
+            }
+        }
+    }
 }

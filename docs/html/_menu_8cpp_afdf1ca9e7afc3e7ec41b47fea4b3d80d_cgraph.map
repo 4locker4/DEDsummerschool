@@ -1,0 +1,32 @@
+<map id="Menu" name="Menu">
+<area shape="rect" id="Node000001" title="Choose, what User want`s to do (No parameters)." alt="" coords="5,80,60,105"/>
+<area shape="rect" id="Node000002" href="$_solvers_8cpp.html#a3742f851cad38e6ede6353de2eea2670" title="Run Square Solver." alt="" coords="109,80,189,105"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="60,90,96,90,96,95,60,95"/>
+<area shape="rect" id="Node000010" href="$_tests_8cpp.html#adaf5e694fb88e9fed751535e7de195e4" title="Start solving equation." alt="" coords="108,155,191,180"/>
+<area shape="poly" id="edge11_Node000001_Node000010" title=" " alt="" coords="55,103,118,145,115,149,52,108"/>
+<area shape="rect" id="Node000013" href="$_utils_8cpp.html#af87631eb819ae84a261e8a2969215ed9" title="User choose." alt="" coords="109,5,190,31"/>
+<area shape="poly" id="edge16_Node000001_Node000013" title=" " alt="" coords="52,77,115,36,118,41,55,82"/>
+<area shape="rect" id="Node000003" href="$_solvers_8cpp.html#a9b77476f35222eb1402899cece946abf" title="Checks the linearity of the equation, sends it to the corresponding function, the output is the numbe..." alt="" coords="393,131,477,156"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="190,103,239,115,312,128,379,136,378,141,311,133,238,121,189,108"/>
+<area shape="rect" id="Node000007" href="$_input_output_8cpp.html#a3c9847eec45383250e7c728934b34bd4" title="Data entry" alt="" coords="257,80,319,105"/>
+<area shape="poly" id="edge8_Node000002_Node000007" title=" " alt="" coords="190,90,243,90,243,95,190,95"/>
+<area shape="rect" id="Node000009" href="$_input_output_8cpp.html#a7150983d90250a4b70279c7fbea12119" title="Data output." alt="" coords="252,31,324,56"/>
+<area shape="poly" id="edge10_Node000002_Node000009" title=" " alt="" coords="185,77,238,58,240,63,187,82"/>
+<area shape="rect" id="Node000004" href="$_utils_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8" title="Double error check." alt="" coords="711,143,768,168"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="477,142,697,151,697,156,477,148"/>
+<area shape="rect" id="Node000005" href="$_solvers_8cpp.html#ab89686da8b60980a4a4c32644e50fb25" title="Solves a linear equation and gives the output number of roots." alt="" coords="557,168,638,193"/>
+<area shape="poly" id="edge4_Node000003_Node000005" title=" " alt="" coords="477,150,544,166,543,171,476,155"/>
+<area shape="rect" id="Node000006" href="$_solvers_8cpp.html#aa750a50b5093ed0852ffcadcb1091988" title="Solves a quadratic equation and gives the output number of roots." alt="" coords="548,67,647,92"/>
+<area shape="poly" id="edge6_Node000003_Node000006" title=" " alt="" coords="467,128,551,95,553,100,469,133"/>
+<area shape="poly" id="edge5_Node000005_Node000004" title=" " alt="" coords="638,171,696,160,697,165,639,176"/>
+<area shape="poly" id="edge7_Node000006_Node000004" title=" " alt="" coords="626,90,664,109,707,133,704,138,661,114,624,94"/>
+<area shape="rect" id="Node000008" href="$_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5" title="Buffer cleaner." alt="" coords="385,31,484,56"/>
+<area shape="poly" id="edge9_Node000007_Node000008" title=" " alt="" coords="318,80,382,58,384,63,320,85"/>
+<area shape="rect" id="Node000011" href="$_tests_8cpp.html#a360873b90ba8d7e36e0c30e22f163d0d" title="Function for unit tests." alt="" coords="239,181,337,207"/>
+<area shape="poly" id="edge12_Node000010_Node000011" title=" " alt="" coords="191,173,225,179,224,184,190,178"/>
+<area shape="poly" id="edge13_Node000011_Node000003" title=" " alt="" coords="325,179,383,158,385,163,327,184"/>
+<area shape="rect" id="Node000012" href="$_utils_8cpp.html#ac3872ec796cbd8dee9a82a69d18d1aa1" title="Checking equality double." alt="" coords="532,217,663,243"/>
+<area shape="poly" id="edge14_Node000011_Node000012" title=" " alt="" coords="338,197,519,218,518,224,337,202"/>
+<area shape="poly" id="edge15_Node000012_Node000004" title=" " alt="" coords="636,215,661,204,709,174,712,179,664,208,638,220"/>
+<area shape="poly" id="edge17_Node000013_Node000008" title=" " alt="" coords="190,13,259,12,338,17,379,25,378,30,337,22,259,17,190,18"/>
+</map>

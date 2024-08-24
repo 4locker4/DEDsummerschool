@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['inputer_0',['Inputer',['../lesson1_8cpp.html#af8955b941bad4d8082ab8c55d6e06b6f',1,'lesson1.cpp']]],
-  ['iszero_1',['IsZero',['../lesson1_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8',1,'lesson1.cpp']]]
+  ['outputer_0',['Outputer',['../_input_output_8cpp.html#ac02c64c15a367d580adca1bf8ff0d261',1,'InputOutput.cpp']]]
 ];

@@ -1,99 +1,128 @@
-#include "C:\Users\eremc\.vscode\Tests\.vscode\c++\inc\Solvers.h"
+///@file Solvers.cpp
+
+#include "..\inc\Solvers.h"
+
+/**
+ * @brief Run Square Solver
+ */
+
+void RunSolver ()
+{
+    Coefficient parameters {};
+    Roots decision {};
+
+    Inputer (&parameters);                                                                  // Gets equation coefficients
+
+    Dispatcher (parameters, &decision);                                                     // Solve the equation
+
+    Outputer (decision);                                                                    // Output results
+}
 
 /**
  * @brief Checks the linearity of the equation, sends it to the corresponding function,
  * the output is the number of roots.
- * \param [in] a  Coefficient before the quadratic term
- * \param [in] b  Coefficient before the first degree term
- * \param [in] c  Free term of the equation
- * \param [in] x1 First root of the equation
- * \param [in] x2 Second root of the equation
+ * \param [in] parameters  Struct with coefficient of equation
+ * \param [in] decision    Struct with roots
  */
 
-int Dispatcher (double a, double b, double c, double* x1, double* x2)
+void Dispatcher (struct Coefficient parameters, struct Roots* decision)
 {
-    assert (isfinite (a));
-    assert (isfinite (b));
-    assert (isfinite (c));
+    assert (isfinite (parameters.a));
+    assert (isfinite (parameters.b));
+    assert (isfinite (parameters.c));
 
-    assert (x1 != x2);
-    assert (x1 != NULL);
-    assert (x2 != NULL);
+    assert (decision != NULL);
 
-    if (IsZero(a))
-        return LineSolver (b, c, x1, x2);
+    if (IsZero (parameters.a))
+        LineSolver (parameters.b, parameters.c, decision);
     else
-        return SquareSolver (a, b, c, x1, x2);
+        SquareSolver (parameters, decision);
 }
 
 /**
  * @brief Solves a linear equation and gives the output number of roots.
- * \param [in] b  Coefficient before the first degree term
- * \param [in] c  Free term of the equation
- * \param [in] x1 First root of the equation
- * \param [in] x2 Second root of the equation
+ * \param [in] b         Coefficient before the first degree term
+ * \param [in] c         Free term of the equation
+ * \param [in] decision  Struct with roots
  */
 
-int LineSolver (double p, double q, double* x1, double* x2)
+void LineSolver (double b, double c, struct Roots* decision)
 {
-    assert (isfinite (p));
-    assert (isfinite (q));
+    assert (isfinite (b));
+    assert (isfinite (c));
 
-    assert (x1 != x2);
-    assert (x1 != NULL);
-    assert (x2 != NULL);
+    assert (decision != NULL);
 
-    if (IsZero (p))                                                                   // If b == 0
-        return (IsZero(q))? SS_INFINITY_ROOTS : ZERO_ROOTS;
-    else                                                                              // If b != 0
+    if (IsZero (b)) 
+    {                                    
+        if (IsZero (c))
+        {
+            decision->nRoots = SS_INFINITY_ROOTS;
+        }
+        else
+        {
+            decision->nRoots = ZERO_ROOTS;
+        }
+
+        return;
+    }
+    else                                                                              
     {
-        *x1 = *x2 = (-q / p);
-        return ONE_ROOT;
+        decision->x1 = decision->x2 = (-c / b);
+        decision->nRoots = ONE_ROOT;
+        return;
     }
 }
 
  /**
  * @brief Solves a quadratic equation and gives the output number of roots.
- * \param [in] a  Coefficient before the quadratic term
- * \param [in] b  Coefficient before the first degree term
- * \param [in] c  Free term of the equation
- * \param [in] x1 First root of the equation
- * \param [in] x2 Second root of the equation
+ * \param [in] parameters Struct with coefficient before the quadratic term
+ * \param [in] decision   Struct with roots of quadratic term
  */
 
-int SquareSolver (double a, double b, double c, double* x1, double* x2)             // Returns the number of roots
+void SquareSolver (struct Coefficient parameters, struct Roots* decision)                    // Returns the number of roots
 {
-    assert (isfinite (a));
-    assert (isfinite (b));
-    assert (isfinite (c));
+    assert (isfinite (parameters.a));
+    assert (isfinite (parameters.b));
+    assert (isfinite (parameters.c));
 
-    assert (x1 != x2);
-    assert (x1 != NULL);
-    assert (x2 != NULL);
+    assert (decision != NULL);
 
-    if (IsZero(c))                                                                  // If c == 0
+    if (IsZero (parameters.c))                                                               // If c == 0
     {
-        *x1 = 0;
-        *x2 = (-b / a);
-        return TWO_ROOTS;
+        if (IsZero (parameters.b))
+        {
+            decision->x1 = decision->x2 = 0;
+            decision->nRoots = ONE_ROOT;
+            return;
+        }
+        decision->x1 = 0;
+        decision->x2 = (parameters.b / -parameters.a);
+       
+        decision->nRoots = TWO_ROOTS;
+        
+        return;
     }
 
-    double discriminant = b * b - 4 * a * c;                                        // Calculate the discriminant
-
-    if (discriminant <= 0)                                                          // Testing for non-negative discriminant
-        return ZERO_ROOTS;
-
-    double sqrtDiscriminant = sqrt(discriminant);                                   // Root of the discriminant
-
-    if (IsZero(sqrtDiscriminant))                                                   // One root
+    double discriminant = parameters.b * parameters.b - 4 * parameters.a * parameters.c;    // Calculate the discriminant
+    if (discriminant <= -EPSILON)                                                           // Testing for non-negative discriminant
     {
-        *x1 = *x2 = -b / (2 * a);
-        return ONE_ROOT;
+        decision->nRoots = ZERO_ROOTS;
+        return;
     }
-    else                                                                            // 2 roots, sqrt_discriminant > EPSILAN
+
+    double sqrtDiscriminant = sqrt (discriminant);                                           // Root of the discriminant
+    if (IsZero (sqrtDiscriminant))                                                           // One root
     {
-        *x1 = (-b + sqrtDiscriminant) / (2 * a);                                    // First root
-        *x2 = (-b - sqrtDiscriminant) / (2 * a);                                    // Second root
-        return TWO_ROOTS;
+        decision->x1 = decision->x2 = (-parameters.b / parameters.a);
+        decision->nRoots = ONE_ROOT;
+        return;
+    }
+    else                                                                                      // 2 roots, sqrt_discriminant > EPSILAN
+    {
+        decision->x1 = (-parameters.b + sqrtDiscriminant) / (2 * parameters.a);               // First root
+        decision->x2 = (-parameters.b - sqrtDiscriminant) / (2 * parameters.a);               // Second root
+        decision->nRoots = TWO_ROOTS;
+        return;
     }
 }

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['epsilon_0',['EPSILON',['../_headers_8h.html#a9b34f013767a7f86c09f5c33fe4f98aa',1,'Headers.h']]]
+  ['a_0',['a',['../struct_coefficient.html#a1031d0e0a97a340abfe0a6ab9e831045',1,'Coefficient']]]
 ];

@@ -1,0 +1,11 @@
+<map id="Dispatcher" name="Dispatcher">
+<area shape="rect" id="Node000001" title="Checks the linearity of the equation, sends it to the corresponding function, the output is the numbe..." alt="" coords="5,23,89,48"/>
+<area shape="rect" id="Node000002" href="$_utils_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8" title="Double error check." alt="" coords="284,23,341,48"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="84,20,137,8,187,3,236,8,272,17,271,22,236,13,187,8,138,13,85,26"/>
+<area shape="rect" id="Node000003" href="$_solvers_8cpp.html#ab89686da8b60980a4a4c32644e50fb25" title="Solves a linear equation and gives the output number of roots." alt="" coords="146,23,227,48"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="90,33,132,33,132,38,90,38"/>
+<area shape="rect" id="Node000004" href="$_solvers_8cpp.html#aa750a50b5093ed0852ffcadcb1091988" title="Solves a quadratic equation and gives the output number of roots." alt="" coords="137,72,236,98"/>
+<area shape="poly" id="edge4_Node000001_Node000004" title=" " alt="" coords="85,46,138,65,136,70,83,51"/>
+<area shape="poly" id="edge3_Node000003_Node000002" title=" " alt="" coords="227,33,270,33,270,38,227,38"/>
+<area shape="poly" id="edge5_Node000004_Node000002" title=" " alt="" coords="219,70,270,49,272,54,221,75"/>
+</map>

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['one_5froot_0',['ONE_ROOT',['../_headers_8h.html#a494c3cfc9425b063fdaaa4027869d53da6700c0f6efd23571cb22aefd2510b1cf',1,'Headers.h']]],
-  ['outputer_1',['Outputer',['../_headers_8h.html#a197595478d63c1366c64293f0491e87b',1,'Outputer(int nRoots, double x1, double x2):&#160;lesson1.cpp'],['../lesson1_8cpp.html#ac02c64c15a367d580adca1bf8ff0d261',1,'Outputer(int rootsQuantity, double x1, double x2):&#160;lesson1.cpp']]]
+  ['inputer_0',['Inputer',['../_input_output_8h.html#a3c9847eec45383250e7c728934b34bd4',1,'Inputer(struct Coefficient *parameters):&#160;InputOutput.cpp'],['../_input_output_8cpp.html#a3c9847eec45383250e7c728934b34bd4',1,'Inputer(struct Coefficient *parameters):&#160;InputOutput.cpp']]],
+  ['inputoutput_2ecpp_1',['InputOutput.cpp',['../_input_output_8cpp.html',1,'']]],
+  ['inputoutput_2eh_2',['InputOutput.h',['../_input_output_8h.html',1,'']]],
+  ['iszero_3',['IsZero',['../_utils_8h.html#ae14fb4b4cfd961db8e279782f175c1d8',1,'IsZero(double val):&#160;Utils.cpp'],['../_utils_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8',1,'IsZero(double val):&#160;Utils.cpp']]]
 ];

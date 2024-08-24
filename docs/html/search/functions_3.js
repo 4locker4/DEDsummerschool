@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main_0',['main',['../lesson1_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4',1,'lesson1.cpp']]]
+  ['linesolver_0',['LineSolver',['../_solvers_8h.html#a8f2e9a96a84b7cfa16a00cfa8e7330dc',1,'LineSolver(double b, double c, struct Roots *dicision):&#160;Solvers.cpp'],['../_solvers_8cpp.html#ab89686da8b60980a4a4c32644e50fb25',1,'LineSolver(double b, double c, struct Roots *decision):&#160;Solvers.cpp']]]
 ];
