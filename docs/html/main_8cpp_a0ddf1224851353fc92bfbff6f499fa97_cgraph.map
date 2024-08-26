@@ -1,0 +1,35 @@
+<map id="main" name="main">
+<area shape="rect" id="Node000001" title="Links: Main ()" alt="" coords="5,105,56,131"/>
+<area shape="rect" id="Node000002" href="$_menu_8cpp.html#a337ba21c2b5d0be0149ce7e7dfb447a4" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,105,159,131"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="56,115,90,115,90,121,56,121"/>
+<area shape="rect" id="Node000003" href="$_utils_8cpp.html#a759073a3d783aadeba47e71167123583" title=" " alt="" coords="226,31,295,56"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="148,103,205,65,215,60,218,64,208,70,151,107"/>
+<area shape="rect" id="Node000004" href="$_solvers_8cpp.html#a3742f851cad38e6ede6353de2eea2670" title="Run Square Solver." alt="" coords="221,80,301,105"/>
+<area shape="poly" id="edge3_Node000002_Node000004" title=" " alt="" coords="158,110,207,100,208,106,159,115"/>
+<area shape="rect" id="Node000012" href="$_tests_8cpp.html#adaf5e694fb88e9fed751535e7de195e4" title="Start Tests." alt="" coords="219,129,302,155"/>
+<area shape="poly" id="edge13_Node000002_Node000012" title=" " alt="" coords="159,120,206,129,205,134,158,126"/>
+<area shape="rect" id="Node000015" href="$_utils_8cpp.html#a9cb68c11f66d8a62ec2975a8516adfc3" title=" " alt="" coords="207,179,315,204"/>
+<area shape="poly" id="edge18_Node000002_Node000015" title=" " alt="" coords="153,129,208,164,220,170,218,175,205,168,150,133"/>
+<area shape="rect" id="Node000005" href="$_solvers_8cpp.html#a9b77476f35222eb1402899cece946abf" title="Checks the linearity of the equation, sends it to the corresponding function, the output is the numbe..." alt="" coords="517,105,601,131"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="301,93,503,111,503,116,301,99"/>
+<area shape="rect" id="Node000009" href="$_input_output_8cpp.html#a3c9847eec45383250e7c728934b34bd4" title="Data entry" alt="" coords="381,55,443,80"/>
+<area shape="poly" id="edge10_Node000004_Node000009" title=" " alt="" coords="300,83,367,72,368,77,301,89"/>
+<area shape="rect" id="Node000011" href="$_input_output_8cpp.html#a7150983d90250a4b70279c7fbea12119" title="Data output." alt="" coords="376,5,448,31"/>
+<area shape="poly" id="edge12_Node000004_Node000011" title=" " alt="" coords="288,78,313,65,361,40,371,35,374,39,364,44,316,70,290,82"/>
+<area shape="rect" id="Node000006" href="$_utils_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8" title="Double error check." alt="" coords="835,117,892,143"/>
+<area shape="poly" id="edge5_Node000005_Node000006" title=" " alt="" coords="601,117,821,126,821,131,601,122"/>
+<area shape="rect" id="Node000007" href="$_solvers_8cpp.html#ab89686da8b60980a4a4c32644e50fb25" title="Solves a linear equation and gives the output number of roots." alt="" coords="681,143,762,168"/>
+<area shape="poly" id="edge6_Node000005_Node000007" title=" " alt="" coords="601,125,668,140,667,146,600,130"/>
+<area shape="rect" id="Node000008" href="$_solvers_8cpp.html#aa750a50b5093ed0852ffcadcb1091988" title="Solves a quadratic equation and gives the output number of roots." alt="" coords="672,41,771,67"/>
+<area shape="poly" id="edge8_Node000005_Node000008" title=" " alt="" coords="591,103,675,69,677,74,593,108"/>
+<area shape="poly" id="edge7_Node000007_Node000006" title=" " alt="" coords="762,146,820,135,821,140,763,151"/>
+<area shape="poly" id="edge9_Node000008_Node000006" title=" " alt="" coords="750,64,788,84,831,108,828,113,785,88,748,69"/>
+<area shape="rect" id="Node000010" href="$_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5" title="Buffer cleaner." alt="" coords="509,55,608,80"/>
+<area shape="poly" id="edge11_Node000009_Node000010" title=" " alt="" coords="443,65,495,65,495,70,443,70"/>
+<area shape="rect" id="Node000013" href="$_tests_8cpp.html#a360873b90ba8d7e36e0c30e22f163d0d" title="Function for unit tests." alt="" coords="363,156,461,181"/>
+<area shape="poly" id="edge14_Node000012_Node000013" title=" " alt="" coords="303,147,349,155,348,160,302,152"/>
+<area shape="poly" id="edge15_Node000013_Node000005" title=" " alt="" coords="449,153,507,133,509,138,451,158"/>
+<area shape="rect" id="Node000014" href="$_utils_8cpp.html#ac3872ec796cbd8dee9a82a69d18d1aa1" title="Checking equality double." alt="" coords="656,192,787,217"/>
+<area shape="poly" id="edge16_Node000013_Node000014" title=" " alt="" coords="462,172,643,193,642,198,461,177"/>
+<area shape="poly" id="edge17_Node000014_Node000006" title=" " alt="" coords="760,189,785,178,833,149,836,153,788,183,762,194"/>
+</map>

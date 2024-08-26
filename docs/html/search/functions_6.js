@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['runsolver_0',['RunSolver',['../_menu_8h.html#a3742f851cad38e6ede6353de2eea2670',1,'RunSolver():&#160;Solvers.cpp'],['../_solvers_8h.html#a3742f851cad38e6ede6353de2eea2670',1,'RunSolver():&#160;Solvers.cpp'],['../_solvers_8cpp.html#a3742f851cad38e6ede6353de2eea2670',1,'RunSolver():&#160;Solvers.cpp']]]
+  ['main_0',['main',['../main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main.cpp']]],
+  ['menu_1',['Menu',['../_menu_8h.html#a337ba21c2b5d0be0149ce7e7dfb447a4',1,'Menu(int argc, char *argv[]):&#160;Menu.cpp'],['../_menu_8cpp.html#a337ba21c2b5d0be0149ce7e7dfb447a4',1,'Menu(int argc, char *argv[]):&#160;Menu.cpp']]]
 ];

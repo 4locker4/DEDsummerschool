@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>quadratic equation: Tests.cpp Source File</title>
+<title>SquareSolver: Tests.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,9 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">quadratic equation<span id="projectnumber">&#160;1.19.4</span>
+   <div id="projectname">SquareSolver
    </div>
-   <div id="projectbrief">program for solving quadratic equations</div>
+   <div id="projectbrief">for solve quadratic eq.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -121,51 +121,52 @@ $(function(){initNavTree('_tests_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        !<a class="code hl_function" href="_utils_8h.html#ac3872ec796cbd8dee9a82a69d18d1aa1">DoubleComparison</a> (expected.<a class="code hl_variable" href="struct_test_const.html#a6e24537510bfda42a6bba22a22c9a66e">x1Required</a>, decision.<a class="code hl_variable" href="struct_roots.html#ac75b803b570527306e1e744bfb7a604f">x1</a>) ||</div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>        !<a class="code hl_function" href="_utils_8h.html#ac3872ec796cbd8dee9a82a69d18d1aa1">DoubleComparison</a> (expected.<a class="code hl_variable" href="struct_test_const.html#a6f7f3bd75c6afd87af388877edbc3bc7">x2Required</a>, decision.<a class="code hl_variable" href="struct_roots.html#adcf04f5f1964d18b332643939561da0d">x2</a>))</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    {</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        printf (<span class="stringliteral">&quot;ERROR, Test number %d/n&quot;</span>, testNum);</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>        printf (<span class="stringliteral">&quot;Input Data: a = %lg, b = %lg, c = %lg\n&quot;</span>, parameters.<a class="code hl_variable" href="struct_coefficient.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, parameters.<a class="code hl_variable" href="struct_coefficient.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, parameters.<a class="code hl_variable" href="struct_coefficient.html#a2c09e929a6ea340fc9653cca414b11d3">c</a>);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        printf (<span class="stringliteral">&quot;Expacted Data: x1 = %lg, x2 = %lg, nRoots = %d\n&quot;</span>, expected.<a class="code hl_variable" href="struct_test_const.html#a6e24537510bfda42a6bba22a22c9a66e">x1Required</a>, expected.<a class="code hl_variable" href="struct_test_const.html#a6f7f3bd75c6afd87af388877edbc3bc7">x2Required</a>, expected.<a class="code hl_variable" href="struct_test_const.html#a54d88282228e72bdf47615fe13eb3fc8">nRoots</a>);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        printf (<span class="stringliteral">&quot;Received Data: x1 = %lg, x2 = %lg, nRoots = %d\n&quot;</span>, decision.<a class="code hl_variable" href="struct_roots.html#ac75b803b570527306e1e744bfb7a604f">x1</a>, decision.<a class="code hl_variable" href="struct_roots.html#adcf04f5f1964d18b332643939561da0d">x2</a>, decision.<a class="code hl_variable" href="struct_roots.html#a54d88282228e72bdf47615fe13eb3fc8">nRoots</a>);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>        <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    }</div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    {</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>        printf (<span class="stringliteral">&quot;Nice! Test number %d is fine!\n&quot;</span>, testNum);</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    }</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>}</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>        printf (<span class="stringliteral">&quot;\n&quot;</span> </div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>                <span class="stringliteral">&quot;ERROR, Test number %d\n&quot;</span>, testNum);</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        printf (<span class="stringliteral">&quot;Input Data: a = %lg, b = %lg, c = %lg\n&quot;</span>, parameters.<a class="code hl_variable" href="struct_coefficient.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>, parameters.<a class="code hl_variable" href="struct_coefficient.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, parameters.<a class="code hl_variable" href="struct_coefficient.html#a2c09e929a6ea340fc9653cca414b11d3">c</a>);</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        printf (<span class="stringliteral">&quot;Expacted Data: x1 = %lg, x2 = %lg, nRoots = %d\n&quot;</span>, expected.<a class="code hl_variable" href="struct_test_const.html#a6e24537510bfda42a6bba22a22c9a66e">x1Required</a>, expected.<a class="code hl_variable" href="struct_test_const.html#a6f7f3bd75c6afd87af388877edbc3bc7">x2Required</a>, expected.<a class="code hl_variable" href="struct_test_const.html#a54d88282228e72bdf47615fe13eb3fc8">nRoots</a>);</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>        printf (<span class="stringliteral">&quot;Received Data: x1 = %lg, x2 = %lg, nRoots = %d\n&quot;</span>, decision.<a class="code hl_variable" href="struct_roots.html#ac75b803b570527306e1e744bfb7a604f">x1</a>, decision.<a class="code hl_variable" href="struct_roots.html#adcf04f5f1964d18b332643939561da0d">x2</a>, decision.<a class="code hl_variable" href="struct_roots.html#a54d88282228e72bdf47615fe13eb3fc8">nRoots</a>);</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    }</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    {</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>        printf (<span class="stringliteral">&quot;Nice! Test number %d is fine!\n&quot;</span>, testNum);</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>        <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    }</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>}</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="foldopen" id="foldopen00040" data-start="{" data-end="}">
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="_tests_8h.html#adaf5e694fb88e9fed751535e7de195e4">   40</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_tests_8cpp.html#adaf5e694fb88e9fed751535e7de195e4">StartTests</a>()                                                               <span class="comment">// Test starter</span></div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>{</div>
-<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <span class="keywordtype">int</span> rightTests = 0;</div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">int</span> falseTests = 6;</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>    <a class="code hl_struct" href="struct_test_res.html">TestRes</a> data[<a class="code hl_variable" href="_tests_8h.html#a5a0e1e24ced3228ae4d5946af6d5f187">QUANTITY</a>] = </div>
-<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    {</div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>        {{ 1,      2,     -3   }, { 1,    -3,   2}},</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {{ 5,      0,      0   }, { 0,     0,   1}},</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {{ 0,      5,     -3   }, { 0.6,   0.6, 1}},</div>
-<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        {{ 0.25, -25,      0   }, { 0,     100, 2}},</div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {{ 0.1,    0.999, -0.01}, { 0.01, -10,  2}},</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {{-1,      66,    -128 }, { 2,     64,  2}}</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    };</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> testNum = 0; testNum &lt;= <a class="code hl_variable" href="_tests_8h.html#a8922e6db6770838ff68837a7036978ef">HOWTEST</a>; testNum++)</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    {</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        rightTests += <a class="code hl_function" href="_tests_8cpp.html#a360873b90ba8d7e36e0c30e22f163d0d">UniversalTest</a> (testNum, data[testNum].parameters, data[testNum].decision);</div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    }</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    printf (<span class="stringliteral">&quot;\n&quot;</span></div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            <span class="stringliteral">&quot;There are/is %d right test(s).\n&quot;</span>, rightTests);</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    printf (<span class="stringliteral">&quot;There are/is %d wrong test(s).\n&quot;</span>, (falseTests - rightTests));</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>}</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span> </div>
+<div class="foldopen" id="foldopen00041" data-start="{" data-end="}">
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno"><a class="line" href="_menu_8h.html#adaf5e694fb88e9fed751535e7de195e4">   41</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_tests_8cpp.html#adaf5e694fb88e9fed751535e7de195e4">StartTests</a>()                                                               <span class="comment">// Test starter</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>{</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <span class="keywordtype">int</span> rightTests = 0;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">int</span> falseTests = 6;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_struct" href="struct_test_res.html">TestRes</a> data[<a class="code hl_variable" href="_tests_8h.html#a5a0e1e24ced3228ae4d5946af6d5f187">QUANTITY</a>] = </div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    {</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>        {{ 1,      2,     -3   }, { 1,    -3,   2}},</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>        {{ 5,      0,      0   }, { 0,     0,   1}},</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>        {{ 0,      5,     -3   }, { 0.6,   0.6, 1}},</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>        {{ 0.25, -25,      0   }, { 0,     100, 2}},</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        {{ 0.1,    0.999, -0.01}, { 0.01, -10,  2}},</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>        {{-1,      66,    -128 }, { 2,     64,  2}}</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    };</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> testNum = 0; testNum &lt;= <a class="code hl_variable" href="_tests_8h.html#a8922e6db6770838ff68837a7036978ef">HOWTEST</a>; testNum++)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    {</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        rightTests += <a class="code hl_function" href="_tests_8cpp.html#a360873b90ba8d7e36e0c30e22f163d0d">UniversalTest</a> (testNum, data[testNum].parameters, data[testNum].decision);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    }</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    printf (<span class="stringliteral">&quot;\n&quot;</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>            <span class="stringliteral">&quot;There are/is %d right test(s).\n&quot;</span>, rightTests);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    printf (<span class="stringliteral">&quot;There are/is %d wrong test(s).\n&quot;</span>, (falseTests - rightTests));</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>}</div>
 </div>
-<div class="ttc" id="a_solvers_8h_html_a6cc1f0e4e86b15e4a30582290f1abccb"><div class="ttname"><a href="_solvers_8h.html#a6cc1f0e4e86b15e4a30582290f1abccb">Dispatcher</a></div><div class="ttdeci">void Dispatcher(struct Coefficient parameters, struct Roots *docision)</div><div class="ttdoc">Distributor for linear and quadratic equations.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8cpp_source.html#l00027">Solvers.cpp:27</a></div></div>
+<div class="ttc" id="a_solvers_8h_html_a6cc1f0e4e86b15e4a30582290f1abccb"><div class="ttname"><a href="_solvers_8h.html#a6cc1f0e4e86b15e4a30582290f1abccb">Dispatcher</a></div><div class="ttdeci">void Dispatcher(struct Coefficient parameters, struct Roots *docision)</div><div class="ttdoc">Distributor for linear and quadratic equations.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8cpp_source.html#l00028">Solvers.cpp:28</a></div></div>
 <div class="ttc" id="a_tests_8cpp_html_a360873b90ba8d7e36e0c30e22f163d0d"><div class="ttname"><a href="_tests_8cpp.html#a360873b90ba8d7e36e0c30e22f163d0d">UniversalTest</a></div><div class="ttdeci">int UniversalTest(int testNum, struct Coefficient parameters, struct Roots decision)</div><div class="ttdoc">Function for unit tests.</div><div class="ttdef"><b>Definition</b> <a href="#l00012">Tests.cpp:12</a></div></div>
-<div class="ttc" id="a_tests_8cpp_html_adaf5e694fb88e9fed751535e7de195e4"><div class="ttname"><a href="_tests_8cpp.html#adaf5e694fb88e9fed751535e7de195e4">StartTests</a></div><div class="ttdeci">void StartTests()</div><div class="ttdoc">Function which include all data for tests.</div><div class="ttdef"><b>Definition</b> <a href="#l00040">Tests.cpp:40</a></div></div>
+<div class="ttc" id="a_tests_8cpp_html_adaf5e694fb88e9fed751535e7de195e4"><div class="ttname"><a href="_tests_8cpp.html#adaf5e694fb88e9fed751535e7de195e4">StartTests</a></div><div class="ttdeci">void StartTests()</div><div class="ttdoc">Function which include all data for tests.</div><div class="ttdef"><b>Definition</b> <a href="#l00041">Tests.cpp:41</a></div></div>
 <div class="ttc" id="a_tests_8h_html"><div class="ttname"><a href="_tests_8h.html">Tests.h</a></div></div>
 <div class="ttc" id="a_tests_8h_html_a5a0e1e24ced3228ae4d5946af6d5f187"><div class="ttname"><a href="_tests_8h.html#a5a0e1e24ced3228ae4d5946af6d5f187">QUANTITY</a></div><div class="ttdeci">const int QUANTITY</div><div class="ttdoc">Size of array with tests.</div><div class="ttdef"><b>Definition</b> <a href="_tests_8h_source.html#l00014">Tests.h:14</a></div></div>
 <div class="ttc" id="a_tests_8h_html_a8922e6db6770838ff68837a7036978ef"><div class="ttname"><a href="_tests_8h.html#a8922e6db6770838ff68837a7036978ef">HOWTEST</a></div><div class="ttdeci">const int HOWTEST</div><div class="ttdoc">Numbers of tests.</div><div class="ttdef"><b>Definition</b> <a href="_tests_8h_source.html#l00015">Tests.h:15</a></div></div>

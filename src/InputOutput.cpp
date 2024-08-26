@@ -13,20 +13,26 @@ void Inputer (struct Coefficient* parameters)                                   
 {
     assert (parameters != NULL);
 
-    printf ("Your equation is:\na * x ^ 2 + b * x + c\n");
-    printf ("Enter the coefficients of the equation.\n\n");
-    printf ("A   B   C\n");
+    YELLOW_PRINT ("Your equation is:\na * x ^ 2 + b * x + c\n");
+    YELLOW_PRINT ("Enter the coefficients of the equation.\n\n");
+    YELLOW_PRINT ("A   B   C\n");
 
     while (scanf ("%lg %lg %lg", &parameters -> a,                                  // Check, what kind of data User input
                                  &parameters -> b,
                                  &parameters -> c) != 3)                                  
-    {
-        printf ("Oh no! You entered incorrect data.\n");
-        printf ("Please, put coefficients, not chars.\n");
+    {   
+        RED_PRINT ("Oh no! You entered incorrect data.\n");
+        RED_PRINT ("Please, put coefficients, not chars.\n");
 
         BufferCleaner();                                                            // Clean Buffer
     }
-    
+    char ch = 0;
+
+    if ((ch = getchar()) != '/n')
+    {
+        YELLOW_PRINT ("\nYou entered some more symbols, that`s not good, but ok.\n\n")
+    }
+
     return;
 }
 
@@ -46,28 +52,28 @@ void Outputer (struct Roots decision)                                           
     {
         case ZERO_ROOTS:                                                            // If there are no roots
         {
-            printf ("No roots!");
+            YELLOW_PRINT ("No roots!");
             break;
         }
         case ONE_ROOT:                                                              // One root
         {
-            printf ("x = %g", decision.x1);
+            YELLOW_PRINT ("x = %g", decision.x1);
             break;
         }
         case TWO_ROOTS:                                                             // Two roots
         {
-            printf ("x1 = %lg, x2 = %lg", decision.x1, decision.x2);
+            YELLOW_PRINT ("x1 = %lg, x2 = %lg", decision.x1, decision.x2);
             break;
         }
         case SS_INFINITY_ROOTS:                                                     // Infinite number of roots
         {
-            printf ("Infinity roots.");
+            YELLOW_PRINT ("Infinity roots.");
             break;
         }
 
         default:                                                                    // Something went wrong; no roots like 0/1/2/INF
         {
-            printf ("main (): ERROR, there is %d roots://", decision.nRoots);
+            RED_PRINT ("main (): ERROR, there is %d roots://", decision.nRoots);
             break;
         }
     }

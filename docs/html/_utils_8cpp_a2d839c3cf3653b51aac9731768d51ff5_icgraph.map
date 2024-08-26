@@ -1,14 +1,13 @@
 <map id="BufferCleaner" name="BufferCleaner">
-<area shape="rect" id="Node000001" title="Clean buffer." alt="" coords="445,31,544,56"/>
-<area shape="rect" id="Node000002" href="$_input_output_8cpp.html#a3c9847eec45383250e7c728934b34bd4" title="Data entry" alt="" coords="336,5,397,31"/>
-<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="431,34,397,27,398,21,432,28"/>
-<area shape="rect" id="Node000006" href="$_utils_8cpp.html#af87631eb819ae84a261e8a2969215ed9" title="User choose." alt="" coords="207,56,288,81"/>
-<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="432,52,288,67,288,62,431,47"/>
-<area shape="rect" id="Node000003" href="$_solvers_8cpp.html#a3742f851cad38e6ede6353de2eea2670" title="Run Square Solver." alt="" coords="207,7,287,32"/>
-<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="322,21,287,22,287,16,322,16"/>
-<area shape="rect" id="Node000004" href="$_menu_8cpp.html#afdf1ca9e7afc3e7ec41b47fea4b3d80d" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,32,159,57"/>
-<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="194,34,159,41,158,36,193,28"/>
-<area shape="rect" id="Node000005" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Links: Main ()" alt="" coords="5,32,56,57"/>
-<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="90,47,56,47,56,42,90,42"/>
-<area shape="poly" id="edge6_Node000006_Node000004" title=" " alt="" coords="193,60,158,53,160,48,194,55"/>
+<area shape="rect" id="Node000001" title="Clean buffer." alt="" coords="464,31,563,56"/>
+<area shape="rect" id="Node000002" href="$_input_output_8cpp.html#a3c9847eec45383250e7c728934b34bd4" title="Data entry" alt="" coords="345,5,406,31"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="450,34,406,26,407,21,451,29"/>
+<area shape="rect" id="Node000006" href="$_utils_8cpp.html#af87631eb819ae84a261e8a2969215ed9" title="User choose." alt="" coords="335,55,416,80"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="451,57,417,63,416,58,450,52"/>
+<area shape="rect" id="Node000003" href="$_solvers_8cpp.html#a3742f851cad38e6ede6353de2eea2670" title="Run Square Solver." alt="" coords="207,5,287,31"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="331,21,287,21,287,15,331,15"/>
+<area shape="rect" id="Node000004" href="$_menu_8cpp.html#a337ba21c2b5d0be0149ce7e7dfb447a4" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,5,159,31"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="193,21,159,21,159,15,193,15"/>
+<area shape="rect" id="Node000005" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Links: Main ()" alt="" coords="5,5,56,31"/>
+<area shape="poly" id="edge4_Node000004_Node000005" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
 </map>

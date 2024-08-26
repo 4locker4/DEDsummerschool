@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['howtest_0',['HOWTEST',['../_tests_8h.html#a8922e6db6770838ff68837a7036978ef',1,'Tests.h']]]
+  ['getflags_0',['GetFlags',['../_menu_8h.html#ace2227db2624850ae214db4161af8a3f',1,'Menu.h']]]
 ];

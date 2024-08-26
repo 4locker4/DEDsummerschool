@@ -4,13 +4,22 @@
 
 /**
  * @brief Function for unit tests
- * \param [in] testNum     Number of the test
- * \param [in] parameters  Struct with coefficient of equation
- * \param [in] decision    Struct with roots
+ * \param [in]  testNum     Number of the test
+ * \param [in]  parameters  Struct with coefficient of equation
+ * \param [in]  decision    Struct with roots
+ * \param [out] return      Is test right or not (true/false)
  */
 
 int UniversalTest (int testNum, struct Coefficient parameters, struct Roots decision)
 {
+    assert (testNum >= 0);
+    assert (isfinite (parameters.a));
+    assert (isfinite (parameters.b));
+    assert (isfinite (parameters.c));
+    assert (decision.nRoots >= -1);    
+    assert (isfinite (decision.x1));    
+    assert (isfinite (decision.x2));    
+
     TestConst expected = {decision.nRoots, decision.x1, decision.x2};
 
     Dispatcher (parameters, &decision);
@@ -19,17 +28,16 @@ int UniversalTest (int testNum, struct Coefficient parameters, struct Roots deci
         !DoubleComparison (expected.x1Required, decision.x1) ||
         !DoubleComparison (expected.x2Required, decision.x2))
     {
-        printf ("\n" 
-                "ERROR, Test number %d\n", testNum);
-        printf ("Input Data: a = %lg, b = %lg, c = %lg\n", parameters.a, parameters.b, parameters.c);
-        printf ("Expacted Data: x1 = %lg, x2 = %lg, nRoots = %d\n", expected.x1Required, expected.x2Required, expected.nRoots);
-        printf ("Received Data: x1 = %lg, x2 = %lg, nRoots = %d\n", decision.x1, decision.x2, decision.nRoots);
+        RED_PRINT ("\nERROR, Test number %d\n", testNum);
+        RED_PRINT ("Input Data: a = %lg, b = %lg, c = %lg\n", parameters.a, parameters.b, parameters.c);
+        RED_PRINT ("Expacted Data: x1 = %lg, x2 = %lg, nRoots = %d\n", expected.x1Required, expected.x2Required, expected.nRoots);
+        RED_PRINT ("Received Data: x1 = %lg, x2 = %lg, nRoots = %d\n\n", decision.x1, decision.x2, decision.nRoots);
 
         return 0;
     }
     else
     {
-        printf ("Nice! Test number %d is fine!\n", testNum);
+        GREEN_PRINT ("Nice! Test number %d is fine!\n", testNum);
         return 1;
     }
 }
@@ -44,8 +52,8 @@ void StartTests()                                                               
     int falseTests = 6;
 
     TestRes data[QUANTITY] = 
-    {
-        {{ 1,      2,     -3   }, { 1,    -3,   2}},
+    {   // a       b       c        x1     x2  nRoots
+        {{ 1,      2,     -3   }, { 0,    -3,   2}},
         {{ 5,      0,      0   }, { 0,     0,   1}},
         {{ 0,      5,     -3   }, { 0.6,   0.6, 1}},
         {{ 0.25, -25,      0   }, { 0,     100, 2}},
@@ -58,8 +66,8 @@ void StartTests()                                                               
         rightTests += UniversalTest (testNum, data[testNum].parameters, data[testNum].decision);
     }
 
-    printf ("\n"
+    GREEN_PRINT ("\n"
             "There are/is %d right test(s).\n", rightTests);
  
-    printf ("There are/is %d wrong test(s).\n", (falseTests - rightTests));
+    RED_PRINT ("There are/is %d wrong test(s).\n", (falseTests - rightTests));
 }

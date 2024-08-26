@@ -97,7 +97,7 @@ void SquareSolver (struct Coefficient parameters, struct Roots* decision)       
             return;
         }
         decision->x1 = 0;
-        decision->x2 = (parameters.b / -parameters.a);
+        decision->x2 = (-parameters.b / parameters.a);
        
         decision->nRoots = TWO_ROOTS;
         
@@ -114,7 +114,7 @@ void SquareSolver (struct Coefficient parameters, struct Roots* decision)       
     double sqrtDiscriminant = sqrt (discriminant);                                           // Root of the discriminant
     if (IsZero (sqrtDiscriminant))                                                           // One root
     {
-        decision->x1 = decision->x2 = (-parameters.b / parameters.a);
+        decision->x1 = decision->x2 = -parameters.b / (2 * parameters.a);
         decision->nRoots = ONE_ROOT;
         return;
     }

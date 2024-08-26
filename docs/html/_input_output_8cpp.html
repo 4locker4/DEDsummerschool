@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>quadratic equation: InputOutput.cpp File Reference</title>
+<title>SquareSolver: InputOutput.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,9 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">quadratic equation<span id="projectnumber">&#160;1.19.4</span>
+   <div id="projectname">SquareSolver
    </div>
-   <div id="projectbrief">program for solving quadratic equations</div>
+   <div id="projectbrief">for solve quadratic eq.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -156,9 +156,9 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   17</span>    printf (<span class="stringliteral">&quot;Enter the coefficients of the equation.\n\n&quot;</span>);</div>
 <div class="line"><span class="lineno">   18</span>    printf (<span class="stringliteral">&quot;A   B   C\n&quot;</span>);</div>
 <div class="line"><span class="lineno">   19</span> </div>
-<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">while</span> (scanf (<span class="stringliteral">&quot;%lg %lg %lg&quot;</span>, &amp;parameters-&gt;<a class="code hl_variable" href="struct_coefficient.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>,                                  <span class="comment">// Check, what kind of data User input</span></div>
-<div class="line"><span class="lineno">   21</span>                                 &amp;parameters-&gt;<a class="code hl_variable" href="struct_coefficient.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, </div>
-<div class="line"><span class="lineno">   22</span>                                 &amp;parameters-&gt;<a class="code hl_variable" href="struct_coefficient.html#a2c09e929a6ea340fc9653cca414b11d3">c</a>) != 3)                                  </div>
+<div class="line"><span class="lineno">   20</span>    <span class="keywordflow">while</span> (scanf (<span class="stringliteral">&quot;%lg %lg %lg&quot;</span>, &amp;parameters -&gt; a,                                  <span class="comment">// Check, what kind of data User input</span></div>
+<div class="line"><span class="lineno">   21</span>                                 &amp;parameters -&gt; b,</div>
+<div class="line"><span class="lineno">   22</span>                                 &amp;parameters -&gt; c) != 3)                                  </div>
 <div class="line"><span class="lineno">   23</span>    {</div>
 <div class="line"><span class="lineno">   24</span>        printf (<span class="stringliteral">&quot;Oh no! You entered incorrect data.\n&quot;</span>);</div>
 <div class="line"><span class="lineno">   25</span>        printf (<span class="stringliteral">&quot;Please, put coefficients, not chars.\n&quot;</span>);</div>
@@ -169,13 +169,10 @@ Functions</h2></td></tr>
 <div class="line"><span class="lineno">   30</span>    <span class="keywordflow">return</span>;</div>
 <div class="line"><span class="lineno">   31</span>}</div>
 <div class="ttc" id="a_utils_8h_html_a2d839c3cf3653b51aac9731768d51ff5"><div class="ttname"><a href="_utils_8h.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a></div><div class="ttdeci">void BufferCleaner()</div><div class="ttdoc">Buffer cleaner.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8cpp_source.html#l00037">Utils.cpp:37</a></div></div>
-<div class="ttc" id="astruct_coefficient_html_a1031d0e0a97a340abfe0a6ab9e831045"><div class="ttname"><a href="struct_coefficient.html#a1031d0e0a97a340abfe0a6ab9e831045">Coefficient::a</a></div><div class="ttdeci">double a</div><div class="ttdoc">First coef.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00015">Solvers.h:15</a></div></div>
-<div class="ttc" id="astruct_coefficient_html_a1510a66dacf9cf3586de5fc89ae2a073"><div class="ttname"><a href="struct_coefficient.html#a1510a66dacf9cf3586de5fc89ae2a073">Coefficient::b</a></div><div class="ttdeci">double b</div><div class="ttdoc">Secord coef.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00016">Solvers.h:16</a></div></div>
-<div class="ttc" id="astruct_coefficient_html_a2c09e929a6ea340fc9653cca414b11d3"><div class="ttname"><a href="struct_coefficient.html#a2c09e929a6ea340fc9653cca414b11d3">Coefficient::c</a></div><div class="ttdeci">double c</div><div class="ttdoc">Third coef.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00017">Solvers.h:17</a></div></div>
 </div><!-- fragment -->
-<p class="reference">References <a class="el" href="_solvers_8h_source.html#l00015">Coefficient::a</a>, <a class="el" href="_solvers_8h_source.html#l00016">Coefficient::b</a>, <a class="el" href="_utils_8cpp_source.html#l00037">BufferCleaner()</a>, and <a class="el" href="_solvers_8h_source.html#l00017">Coefficient::c</a>.</p>
+<p class="reference">References <a class="el" href="_utils_8cpp_source.html#l00037">BufferCleaner()</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solvers_8cpp_source.html#l00008">RunSolver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_solvers_8cpp_source.html#l00009">RunSolver()</a>.</p>
 <div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
@@ -194,9 +191,9 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Performs data entry." alt="" coords="335,5,396,31"/>
 <area shape="rect" href="_solvers_8cpp.html#a3742f851cad38e6ede6353de2eea2670" title="Run Square Solver." alt="" coords="207,5,287,31"/>
 <area shape="poly" title=" " alt="" coords="321,21,287,21,287,15,321,15"/>
-<area shape="rect" href="_menu_8cpp.html#afdf1ca9e7afc3e7ec41b47fea4b3d80d" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,5,159,31"/>
+<area shape="rect" href="_menu_8cpp.html#a337ba21c2b5d0be0149ce7e7dfb447a4" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,5,159,31"/>
 <area shape="poly" title=" " alt="" coords="193,21,159,21,159,15,193,15"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Links: Main ()" alt="" coords="5,5,56,31"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Links: Main ()" alt="" coords="5,5,56,31"/>
 <area shape="poly" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
 </map>
 </div>
@@ -274,7 +271,7 @@ Here is the caller graph for this function:</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="_solvers_8h_source.html#l00024">Roots::nRoots</a>, <a class="el" href="_solvers_8h_source.html#l00030">ONE_ROOT</a>, <a class="el" href="_solvers_8h_source.html#l00032">SS_INFINITY_ROOTS</a>, <a class="el" href="_solvers_8h_source.html#l00031">TWO_ROOTS</a>, <a class="el" href="_solvers_8h_source.html#l00022">Roots::x1</a>, <a class="el" href="_solvers_8h_source.html#l00023">Roots::x2</a>, and <a class="el" href="_solvers_8h_source.html#l00029">ZERO_ROOTS</a>.</p>
 
-<p class="reference">Referenced by <a class="el" href="_solvers_8cpp_source.html#l00008">RunSolver()</a>.</p>
+<p class="reference">Referenced by <a class="el" href="_solvers_8cpp_source.html#l00009">RunSolver()</a>.</p>
 <div class="dynheader">
 Here is the caller graph for this function:</div>
 <div class="dyncontent">
@@ -283,9 +280,9 @@ Here is the caller graph for this function:</div>
 <area shape="rect" title="Produces output." alt="" coords="335,5,407,31"/>
 <area shape="rect" href="_solvers_8cpp.html#a3742f851cad38e6ede6353de2eea2670" title="Run Square Solver." alt="" coords="207,5,287,31"/>
 <area shape="poly" title=" " alt="" coords="321,21,287,21,287,15,321,15"/>
-<area shape="rect" href="_menu_8cpp.html#afdf1ca9e7afc3e7ec41b47fea4b3d80d" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,5,159,31"/>
+<area shape="rect" href="_menu_8cpp.html#a337ba21c2b5d0be0149ce7e7dfb447a4" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,5,159,31"/>
 <area shape="poly" title=" " alt="" coords="193,21,159,21,159,15,193,15"/>
-<area shape="rect" href="main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Links: Main ()" alt="" coords="5,5,56,31"/>
+<area shape="rect" href="main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Links: Main ()" alt="" coords="5,5,56,31"/>
 <area shape="poly" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
 </map>
 </div>

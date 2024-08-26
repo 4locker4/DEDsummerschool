@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['linesolver_0',['LineSolver',['../_solvers_8h.html#a8f2e9a96a84b7cfa16a00cfa8e7330dc',1,'LineSolver(double b, double c, struct Roots *dicision):&#160;Solvers.cpp'],['../_solvers_8cpp.html#ab89686da8b60980a4a4c32644e50fb25',1,'LineSolver(double b, double c, struct Roots *decision):&#160;Solvers.cpp']]]
+  ['helplist_0',['HelpList',['../_menu_8h.html#a759073a3d783aadeba47e71167123583',1,'HelpList():&#160;Utils.cpp'],['../_utils_8cpp.html#a759073a3d783aadeba47e71167123583',1,'HelpList():&#160;Utils.cpp']]]
 ];

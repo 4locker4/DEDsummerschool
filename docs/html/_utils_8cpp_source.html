@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>quadratic equation: Utils.cpp Source File</title>
+<title>SquareSolver: Utils.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,9 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">quadratic equation<span id="projectnumber">&#160;1.19.4</span>
+   <div id="projectname">SquareSolver
    </div>
-   <div id="projectbrief">program for solving quadratic equations</div>
+   <div id="projectbrief">for solve quadratic eq.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -136,7 +136,7 @@ $(function(){initNavTree('_utils_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>{   </div>
 <div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">int</span> ch = 0;</div>
 <div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span> </div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">while</span> ((ch == getchar ()) != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; ch != EOF){}</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <span class="keywordflow">while</span> ((ch == getchar ()) != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; ch != EOF) {}</div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>}</div>
 </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
@@ -149,35 +149,79 @@ $(function(){initNavTree('_utils_8cpp_source.html',''); initResizable(true); });
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordflow">while</span> (<span class="keyword">true</span>)</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    {   </div>
 <div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>        ch1 = getchar ();</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>        ch2 = getchar ();</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        </div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        <span class="keywordflow">if</span> (ch1 == <span class="charliteral">&#39;t&#39;</span> &amp;&amp; ch2 == <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>        {</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">TEST</a>;</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        }</div>
-<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (ch1 == <span class="charliteral">&#39;p&#39;</span> &amp;&amp; ch2 == <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        {</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a>;</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        }</div>
-<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        <span class="keywordflow">else</span></div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        {   </div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>            <span class="keywordflow">if</span> (ch1 != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; ch2 != <span class="charliteral">&#39;\n&#39;</span>)</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>            {</div>
-<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>                <a class="code hl_function" href="_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a>();</div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>                printf (<span class="stringliteral">&quot;Watch out! You input wrong data. Shut up and read Kernighan and Ritchie!!!\n&quot;</span>);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>            }</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>        }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    }</div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        <span class="keywordflow">if</span> (ch1 != <span class="charliteral">&#39;t&#39;</span> &amp;&amp; ch1 != <span class="charliteral">&#39;p&#39;</span>)</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>        {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>            <a class="code hl_function" href="_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a>();</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>            printf (<span class="stringliteral">&quot;Watch out! You input wrong data. Shut up and read Kernighan and Ritchie!!!\n&quot;</span>);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>            </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        }</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> ((ch2 = getchar ()) != <span class="charliteral">&#39;\n&#39;</span> &amp;&amp; ch2 != EOF)</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>        {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            <a class="code hl_function" href="_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a>();</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>            printf (<span class="stringliteral">&quot;Watch out! You input wrong data. Shut up and read Kernighan and Ritchie!!!\n&quot;</span>);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        }</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>        {</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>            <span class="keywordflow">return</span> ch1;</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>        }</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    }</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>}</div>
+</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
+<div class="foldopen" id="foldopen00075" data-start="{" data-end="}">
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno"><a class="line" href="_utils_8cpp.html#a9cb68c11f66d8a62ec2975a8516adfc3">   75</a></span><span class="keywordtype">int</span> <a class="code hl_function" href="_utils_8cpp.html#a9cb68c11f66d8a62ec2975a8516adfc3">StringCompare</a> (<span class="keywordtype">char</span>* str)</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>{</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <span class="keywordtype">int</span> lenStr = strlen(str); </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>    <span class="keywordflow">if</span> (lenStr == 2 &amp;&amp; str[0] == <span class="charliteral">&#39;-&#39;</span>)</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>    {</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>        <span class="keywordflow">return</span> str[<a class="code hl_variable" href="_utils_8h.html#abf8ffa7daab1845ca3615f7b6d5503c9">SYMB</a>]; <span class="comment">// if str[symb] == &#39;q&#39;</span></div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    }</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strlen(str) &lt;= 6)</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    {</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>        <span class="keywordflow">if</span> (strcmp (str, <span class="stringliteral">&quot;--test&quot;</span>) == 0)</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>        {</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">TEST</a>;</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        }</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp (str, <span class="stringliteral">&quot;--help&quot;</span>) == 0)</div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>        {</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0a9f5cb747b2e1f0ea781d2b1f2a5b4824">HELP</a>;</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>        }</div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span>        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (strcmp (str, <span class="stringliteral">&quot;--put&quot;</span>) == 0)</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        {</div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>            <span class="keywordflow">return</span> <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a>;</div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>        }</div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    }</div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>    <span class="keywordflow">else</span></div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    {</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>        printf (<span class="stringliteral">&quot;You put something wrong, try again./n&quot;</span>);</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>    }</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span> </div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>}</div>
+</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span> </div>
+<div class="foldopen" id="foldopen00105" data-start="{" data-end="}">
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno"><a class="line" href="_menu_8h.html#a759073a3d783aadeba47e71167123583">  105</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="_utils_8cpp.html#a759073a3d783aadeba47e71167123583">HelpList</a> ()</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>{</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>    printf (<span class="stringliteral">&quot;This program solve`s quadratic equations.\nFor more infomation watch README.md/n/n&quot;</span>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>    printf (<span class="stringliteral">&quot;--test (-t) - For  test program\n\n&quot;</span>);</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    printf (<span class="stringliteral">&quot;--put (-p) - For put Your values\n\n&quot;</span>);</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>    printf (<span class="stringliteral">&quot;--help (-h) - For help-list\n\n&quot;</span>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span>}</div>
 </div>
 <div class="ttc" id="a_solvers_8h_html_a596344e5a2992d2beec43b76a6294de0"><div class="ttname"><a href="_solvers_8h.html#a596344e5a2992d2beec43b76a6294de0">EPSILON</a></div><div class="ttdeci">const double EPSILON</div><div class="ttdoc">Error constant double.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00035">Solvers.h:35</a></div></div>
 <div class="ttc" id="a_utils_8cpp_html_a2d839c3cf3653b51aac9731768d51ff5"><div class="ttname"><a href="_utils_8cpp.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a></div><div class="ttdeci">void BufferCleaner()</div><div class="ttdoc">Clean buffer.</div><div class="ttdef"><b>Definition</b> <a href="#l00037">Utils.cpp:37</a></div></div>
+<div class="ttc" id="a_utils_8cpp_html_a759073a3d783aadeba47e71167123583"><div class="ttname"><a href="_utils_8cpp.html#a759073a3d783aadeba47e71167123583">HelpList</a></div><div class="ttdeci">void HelpList()</div><div class="ttdef"><b>Definition</b> <a href="#l00105">Utils.cpp:105</a></div></div>
+<div class="ttc" id="a_utils_8cpp_html_a9cb68c11f66d8a62ec2975a8516adfc3"><div class="ttname"><a href="_utils_8cpp.html#a9cb68c11f66d8a62ec2975a8516adfc3">StringCompare</a></div><div class="ttdeci">int StringCompare(char *str)</div><div class="ttdef"><b>Definition</b> <a href="#l00075">Utils.cpp:75</a></div></div>
 <div class="ttc" id="a_utils_8cpp_html_ac3872ec796cbd8dee9a82a69d18d1aa1"><div class="ttname"><a href="_utils_8cpp.html#ac3872ec796cbd8dee9a82a69d18d1aa1">DoubleComparison</a></div><div class="ttdeci">bool DoubleComparison(double firstNum, double secondNum)</div><div class="ttdoc">Compearing two double nums.</div><div class="ttdef"><b>Definition</b> <a href="#l00025">Utils.cpp:25</a></div></div>
 <div class="ttc" id="a_utils_8cpp_html_ae14fb4b4cfd961db8e279782f175c1d8"><div class="ttname"><a href="_utils_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8">IsZero</a></div><div class="ttdeci">bool IsZero(double val)</div><div class="ttdoc">Checks double error.</div><div class="ttdef"><b>Definition</b> <a href="#l00010">Utils.cpp:10</a></div></div>
 <div class="ttc" id="a_utils_8cpp_html_af87631eb819ae84a261e8a2969215ed9"><div class="ttname"><a href="_utils_8cpp.html#af87631eb819ae84a261e8a2969215ed9">TestOrPut</a></div><div class="ttdeci">int TestOrPut()</div><div class="ttdoc">Return what user want: test or put vals.</div><div class="ttdef"><b>Definition</b> <a href="#l00048">Utils.cpp:48</a></div></div>
 <div class="ttc" id="a_utils_8h_html"><div class="ttname"><a href="_utils_8h.html">Utils.h</a></div></div>
-<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">TEST</a></div><div class="ttdeci">@ TEST</div><div class="ttdoc">Test mode.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8h_source.html#l00014">Utils.h:14</a></div></div>
-<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a></div><div class="ttdeci">@ PUT</div><div class="ttdoc">Put mode.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8h_source.html#l00016">Utils.h:15</a></div></div>
+<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0a9f5cb747b2e1f0ea781d2b1f2a5b4824"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0a9f5cb747b2e1f0ea781d2b1f2a5b4824">HELP</a></div><div class="ttdeci">@ HELP</div><div class="ttdoc">For help.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8h_source.html#l00020">Utils.h:19</a></div></div>
+<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">TEST</a></div><div class="ttdeci">@ TEST</div><div class="ttdoc">Test mode.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8h_source.html#l00017">Utils.h:17</a></div></div>
+<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a></div><div class="ttdeci">@ PUT</div><div class="ttdoc">Put mode.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8h_source.html#l00018">Utils.h:18</a></div></div>
+<div class="ttc" id="a_utils_8h_html_abf8ffa7daab1845ca3615f7b6d5503c9"><div class="ttname"><a href="_utils_8h.html#abf8ffa7daab1845ca3615f7b6d5503c9">SYMB</a></div><div class="ttdeci">const int SYMB</div><div class="ttdef"><b>Definition</b> <a href="_utils_8h_source.html#l00013">Utils.h:13</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

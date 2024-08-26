@@ -1,9 +1,9 @@
 <map id="UniversalTest" name="UniversalTest">
 <area shape="rect" id="Node000001" title="Function for unit tests." alt="" coords="337,5,436,31"/>
-<area shape="rect" id="Node000002" href="$_tests_8cpp.html#adaf5e694fb88e9fed751535e7de195e4" title="Start solving equation." alt="" coords="207,5,289,31"/>
+<area shape="rect" id="Node000002" href="$_tests_8cpp.html#adaf5e694fb88e9fed751535e7de195e4" title="Start Tests." alt="" coords="207,5,289,31"/>
 <area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="324,21,289,21,289,15,324,15"/>
-<area shape="rect" id="Node000003" href="$_menu_8cpp.html#afdf1ca9e7afc3e7ec41b47fea4b3d80d" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,5,159,31"/>
+<area shape="rect" id="Node000003" href="$_menu_8cpp.html#a337ba21c2b5d0be0149ce7e7dfb447a4" title="Choose, what User want`s to do (No parameters)" alt="" coords="104,5,159,31"/>
 <area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="193,21,159,21,159,15,193,15"/>
-<area shape="rect" id="Node000004" href="$main_8cpp.html#ae66f6b31b5ad750f1fe042a706a4e3d4" title="Links: Main ()" alt="" coords="5,5,56,31"/>
+<area shape="rect" id="Node000004" href="$main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97" title="Links: Main ()" alt="" coords="5,5,56,31"/>
 <area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="90,21,56,21,56,15,90,15"/>
 </map>

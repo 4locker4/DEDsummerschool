@@ -38,6 +38,5 @@ void Dispatcher   (struct Coefficient parameters, struct Roots* docision);      
 void LineSolver   (double b, double c, struct Roots* dicision);                     ///< Solve linear equations
 void SquareSolver (struct Coefficient parameters, struct Roots* docision);          ///< Solving a quadratic equation    
 void RunSolver    ();                                                               ///< Start soling
-int TestOrPut     ();                                                               ///< Function, where User choose test or put
 
 #endif // SOLVERS_H

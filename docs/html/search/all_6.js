@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['inputer_0',['Inputer',['../_input_output_8h.html#a3c9847eec45383250e7c728934b34bd4',1,'Inputer(struct Coefficient *parameters):&#160;InputOutput.cpp'],['../_input_output_8cpp.html#a3c9847eec45383250e7c728934b34bd4',1,'Inputer(struct Coefficient *parameters):&#160;InputOutput.cpp']]],
-  ['inputoutput_2ecpp_1',['InputOutput.cpp',['../_input_output_8cpp.html',1,'']]],
-  ['inputoutput_2eh_2',['InputOutput.h',['../_input_output_8h.html',1,'']]],
-  ['iszero_3',['IsZero',['../_utils_8h.html#ae14fb4b4cfd961db8e279782f175c1d8',1,'IsZero(double val):&#160;Utils.cpp'],['../_utils_8cpp.html#ae14fb4b4cfd961db8e279782f175c1d8',1,'IsZero(double val):&#160;Utils.cpp']]]
+  ['help_0',['HELP',['../_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0a9f5cb747b2e1f0ea781d2b1f2a5b4824',1,'Utils.h']]],
+  ['helplist_1',['HelpList',['../_menu_8h.html#a759073a3d783aadeba47e71167123583',1,'HelpList():&#160;Utils.cpp'],['../_utils_8cpp.html#a759073a3d783aadeba47e71167123583',1,'HelpList():&#160;Utils.cpp']]],
+  ['howtest_2',['HOWTEST',['../_tests_8h.html#a8922e6db6770838ff68837a7036978ef',1,'Tests.h']]]
 ];

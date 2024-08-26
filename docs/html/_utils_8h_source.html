@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>quadratic equation: Utils.h Source File</title>
+<title>SquareSolver: Utils.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,9 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">quadratic equation<span id="projectnumber">&#160;1.19.4</span>
+   <div id="projectname">SquareSolver
    </div>
-   <div id="projectbrief">program for solving quadratic equations</div>
+   <div id="projectbrief">for solve quadratic eq.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -114,28 +114,35 @@ $(function(){initNavTree('_utils_8h_source.html',''); initResizable(true); });
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &lt;assert.h&gt;</span></div>
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &lt;math.h&gt;</span></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span> </div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="_solvers_8h.html">Solvers.h</a>&quot;</span></div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span> </div>
-<div class="foldopen" id="foldopen00012" data-start="{" data-end="};">
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0">   12</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0">spectrum1</a></div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>{</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">   14</a></span>    <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">TEST</a> = 0,                                                                       </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a>  = 1                                                                        </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">   16</a></span>};</div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;string.h&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="_solvers_8h.html">Solvers.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="_utils_8h.html#abf8ffa7daab1845ca3615f7b6d5503c9">   13</a></span><span class="keyword">const</span> <span class="keywordtype">int</span> <a class="code hl_variable" href="_utils_8h.html#abf8ffa7daab1845ca3615f7b6d5503c9">SYMB</a> = 1;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="foldopen" id="foldopen00015" data-start="{" data-end="};">
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno"><a class="line" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0">   15</a></span><span class="keyword">enum</span> <a class="code hl_enumeration" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0">spectrum1</a></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>{</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno"><a class="line" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">   17</a></span>    <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">TEST</a> = <span class="charliteral">&#39;t&#39;</span>,                                                                       </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno"><a class="line" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">   18</a></span>    <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a>  = <span class="charliteral">&#39;p&#39;</span>,                                                                       </div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <a class="code hl_enumvalue" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0a9f5cb747b2e1f0ea781d2b1f2a5b4824">HELP</a> = <span class="charliteral">&#39;h&#39;</span>                                                                       </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno"><a class="line" href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0a9f5cb747b2e1f0ea781d2b1f2a5b4824">   20</a></span>};</div>
 </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span> </div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_utils_8h.html#ae14fb4b4cfd961db8e279782f175c1d8">IsZero</a>             (<span class="keywordtype">double</span> val);                                               </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_utils_8h.html#ac3872ec796cbd8dee9a82a69d18d1aa1">DoubleComparison</a>   (<span class="keywordtype">double</span> firstNum, <span class="keywordtype">double</span> secondNum);                        </div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keywordtype">void</span> <a class="code hl_function" href="_utils_8h.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a>      ();                                                         </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_utils_8h.html#ae14fb4b4cfd961db8e279782f175c1d8">IsZero</a>             (<span class="keywordtype">double</span> val);                                               </div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="keywordtype">bool</span> <a class="code hl_function" href="_utils_8h.html#ac3872ec796cbd8dee9a82a69d18d1aa1">DoubleComparison</a>   (<span class="keywordtype">double</span> firstNum, <span class="keywordtype">double</span> secondNum);                        </div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="keywordtype">void</span> <a class="code hl_function" href="_utils_8h.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a>      ();                                                         </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span> </div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
 <div class="ttc" id="a_solvers_8h_html"><div class="ttname"><a href="_solvers_8h.html">Solvers.h</a></div></div>
-<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0">spectrum1</a></div><div class="ttdeci">spectrum1</div><div class="ttdef"><b>Definition</b> <a href="#l00012">Utils.h:13</a></div></div>
-<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">TEST</a></div><div class="ttdeci">@ TEST</div><div class="ttdoc">Test mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00014">Utils.h:14</a></div></div>
-<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a></div><div class="ttdeci">@ PUT</div><div class="ttdoc">Put mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00016">Utils.h:15</a></div></div>
+<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0">spectrum1</a></div><div class="ttdeci">spectrum1</div><div class="ttdef"><b>Definition</b> <a href="#l00015">Utils.h:16</a></div></div>
+<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0a9f5cb747b2e1f0ea781d2b1f2a5b4824"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0a9f5cb747b2e1f0ea781d2b1f2a5b4824">HELP</a></div><div class="ttdeci">@ HELP</div><div class="ttdoc">For help.</div><div class="ttdef"><b>Definition</b> <a href="#l00020">Utils.h:19</a></div></div>
+<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0ab2f0cd22b1963becef8b91d29d567fe8">TEST</a></div><div class="ttdeci">@ TEST</div><div class="ttdoc">Test mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00017">Utils.h:17</a></div></div>
+<div class="ttc" id="a_utils_8h_html_a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9"><div class="ttname"><a href="_utils_8h.html#a0de4f41b056e7c436ce4be1dbaaa8fb0afec39d40e8bc9e12afa614df5ddb9fa9">PUT</a></div><div class="ttdeci">@ PUT</div><div class="ttdoc">Put mode.</div><div class="ttdef"><b>Definition</b> <a href="#l00018">Utils.h:18</a></div></div>
 <div class="ttc" id="a_utils_8h_html_a2d839c3cf3653b51aac9731768d51ff5"><div class="ttname"><a href="_utils_8h.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a></div><div class="ttdeci">void BufferCleaner()</div><div class="ttdoc">Buffer cleaner.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8cpp_source.html#l00037">Utils.cpp:37</a></div></div>
+<div class="ttc" id="a_utils_8h_html_abf8ffa7daab1845ca3615f7b6d5503c9"><div class="ttname"><a href="_utils_8h.html#abf8ffa7daab1845ca3615f7b6d5503c9">SYMB</a></div><div class="ttdeci">const int SYMB</div><div class="ttdef"><b>Definition</b> <a href="#l00013">Utils.h:13</a></div></div>
 <div class="ttc" id="a_utils_8h_html_ac3872ec796cbd8dee9a82a69d18d1aa1"><div class="ttname"><a href="_utils_8h.html#ac3872ec796cbd8dee9a82a69d18d1aa1">DoubleComparison</a></div><div class="ttdeci">bool DoubleComparison(double firstNum, double secondNum)</div><div class="ttdoc">Checking equality double.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8cpp_source.html#l00025">Utils.cpp:25</a></div></div>
 <div class="ttc" id="a_utils_8h_html_ae14fb4b4cfd961db8e279782f175c1d8"><div class="ttname"><a href="_utils_8h.html#ae14fb4b4cfd961db8e279782f175c1d8">IsZero</a></div><div class="ttdeci">bool IsZero(double val)</div><div class="ttdoc">Double error check.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8cpp_source.html#l00010">Utils.cpp:10</a></div></div>
 </div><!-- fragment --></div><!-- contents -->

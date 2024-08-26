@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.12.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>quadratic equation: InputOutput.cpp Source File</title>
+<title>SquareSolver: InputOutput.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -32,9 +32,9 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">quadratic equation<span id="projectnumber">&#160;1.19.4</span>
+   <div id="projectname">SquareSolver
    </div>
-   <div id="projectbrief">program for solving quadratic equations</div>
+   <div id="projectbrief">for solve quadratic eq.</div>
   </td>
     <td>        <div id="MSearchBox" class="MSearchBoxInactive">
         <span class="left">
@@ -119,9 +119,9 @@ $(function(){initNavTree('_input_output_8cpp_source.html',''); initResizable(tru
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    printf (<span class="stringliteral">&quot;Enter the coefficients of the equation.\n\n&quot;</span>);</div>
 <div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    printf (<span class="stringliteral">&quot;A   B   C\n&quot;</span>);</div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">while</span> (scanf (<span class="stringliteral">&quot;%lg %lg %lg&quot;</span>, &amp;parameters-&gt;<a class="code hl_variable" href="struct_coefficient.html#a1031d0e0a97a340abfe0a6ab9e831045">a</a>,                                  <span class="comment">// Check, what kind of data User input</span></div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                 &amp;parameters-&gt;<a class="code hl_variable" href="struct_coefficient.html#a1510a66dacf9cf3586de5fc89ae2a073">b</a>, </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                                 &amp;parameters-&gt;<a class="code hl_variable" href="struct_coefficient.html#a2c09e929a6ea340fc9653cca414b11d3">c</a>) != 3)                                  </div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    <span class="keywordflow">while</span> (scanf (<span class="stringliteral">&quot;%lg %lg %lg&quot;</span>, &amp;parameters -&gt; a,                                  <span class="comment">// Check, what kind of data User input</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>                                 &amp;parameters -&gt; b,</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>                                 &amp;parameters -&gt; c) != 3)                                  </div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    {</div>
 <div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>        printf (<span class="stringliteral">&quot;Oh no! You entered incorrect data.\n&quot;</span>);</div>
 <div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>        printf (<span class="stringliteral">&quot;Please, put coefficients, not chars.\n&quot;</span>);</div>
@@ -179,9 +179,6 @@ $(function(){initNavTree('_input_output_8cpp_source.html',''); initResizable(tru
 <div class="ttc" id="a_solvers_8h_html_a494c3cfc9425b063fdaaa4027869d53daa447836367d1ec024028745a221f5ac2"><div class="ttname"><a href="_solvers_8h.html#a494c3cfc9425b063fdaaa4027869d53daa447836367d1ec024028745a221f5ac2">SS_INFINITY_ROOTS</a></div><div class="ttdeci">@ SS_INFINITY_ROOTS</div><div class="ttdoc">Number of equation roots: 0 INFINITY.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00033">Solvers.h:32</a></div></div>
 <div class="ttc" id="a_utils_8h_html_a2d839c3cf3653b51aac9731768d51ff5"><div class="ttname"><a href="_utils_8h.html#a2d839c3cf3653b51aac9731768d51ff5">BufferCleaner</a></div><div class="ttdeci">void BufferCleaner()</div><div class="ttdoc">Buffer cleaner.</div><div class="ttdef"><b>Definition</b> <a href="_utils_8cpp_source.html#l00037">Utils.cpp:37</a></div></div>
 <div class="ttc" id="astruct_coefficient_html"><div class="ttname"><a href="struct_coefficient.html">Coefficient</a></div><div class="ttdoc">&lt; Coefficients</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00013">Solvers.h:14</a></div></div>
-<div class="ttc" id="astruct_coefficient_html_a1031d0e0a97a340abfe0a6ab9e831045"><div class="ttname"><a href="struct_coefficient.html#a1031d0e0a97a340abfe0a6ab9e831045">Coefficient::a</a></div><div class="ttdeci">double a</div><div class="ttdoc">First coef.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00015">Solvers.h:15</a></div></div>
-<div class="ttc" id="astruct_coefficient_html_a1510a66dacf9cf3586de5fc89ae2a073"><div class="ttname"><a href="struct_coefficient.html#a1510a66dacf9cf3586de5fc89ae2a073">Coefficient::b</a></div><div class="ttdeci">double b</div><div class="ttdoc">Secord coef.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00016">Solvers.h:16</a></div></div>
-<div class="ttc" id="astruct_coefficient_html_a2c09e929a6ea340fc9653cca414b11d3"><div class="ttname"><a href="struct_coefficient.html#a2c09e929a6ea340fc9653cca414b11d3">Coefficient::c</a></div><div class="ttdeci">double c</div><div class="ttdoc">Third coef.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00017">Solvers.h:17</a></div></div>
 <div class="ttc" id="astruct_roots_html"><div class="ttname"><a href="struct_roots.html">Roots</a></div><div class="ttdoc">&lt; Roots</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00020">Solvers.h:21</a></div></div>
 <div class="ttc" id="astruct_roots_html_a54d88282228e72bdf47615fe13eb3fc8"><div class="ttname"><a href="struct_roots.html#a54d88282228e72bdf47615fe13eb3fc8">Roots::nRoots</a></div><div class="ttdeci">int nRoots</div><div class="ttdoc">Number of roots.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00024">Solvers.h:24</a></div></div>
 <div class="ttc" id="astruct_roots_html_ac75b803b570527306e1e744bfb7a604f"><div class="ttname"><a href="struct_roots.html#ac75b803b570527306e1e744bfb7a604f">Roots::x1</a></div><div class="ttdeci">double x1</div><div class="ttdoc">First root.</div><div class="ttdef"><b>Definition</b> <a href="_solvers_8h_source.html#l00022">Solvers.h:22</a></div></div>

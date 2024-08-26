@@ -10,4 +10,8 @@
 
 # Ignore exe
 
-*exe
+*.exe
+
+./docs/
+./vscode/
+
