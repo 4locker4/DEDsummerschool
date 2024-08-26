@@ -8,6 +8,7 @@
 #include "Solvers.h"
 #include "Tests.h"
 #include "Utils.h"
+#include "Errors.h"
                                                                                 
 const int SYMB = 1;                                                                     ///< Symbols in argv string
 

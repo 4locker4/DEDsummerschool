@@ -10,8 +10,8 @@
 
 void Menu (int argc, char* argv[])
 {
-    assert (argc >= 1);
-    assert (argv != NULL);
+    my_assert (argc >= 1);
+    my_assert (argv != NULL);
 
     if (argc == 1)
     {
@@ -60,8 +60,8 @@ void Menu (int argc, char* argv[])
 
 int GetFlags (int argc, char* str)
 {
-    assert (argc > 0);
-    assert (str != NULL);
+    my_assert (argc > 0);
+    my_assert (str != NULL);
 
     int lenStr = strlen(str); 
 

@@ -1,14 +1,35 @@
 # SquareSolver
-### The program was created to solve quadratic equations 
+### Программа создана для решения квадратных уравнений
 
-Basic commands for Square solver
+*Руководство по установке*
+
+- Сначала скачайте файлы на свой компьютер, перейдя по ссылке
+
+*[Ссылка на скачивание](https://github.com/4locker4/DEDsummerschool/archive/refs/heads/main.zip)*
+
+- Затем разархивируйте zip файл в одну папку
+
+-Далее требуется собрать программу. Для этого пропиши в командной строке, указав верный путь до расположения скачанного файла, следущее
+
+```
+make
+```
+- Отлично, все готово к запуску. Теперь вам требуется прописать в командной строке:
+
+```
+Square.exe
+```
+И программа готова к работе!
+
+Также вы можете ввести после *make* следующие флаги:
+
 ```
 --help
 --test
 --put
 ```
 
-or
+или
 
 ```
 -h
@@ -16,10 +37,11 @@ or
 -p
 ```
 
-They are:
+Для
 
-- Help. Use, if You don`t understand something.
-- Test. Use, if You want to test our program.
-- Put.  Use, if You want to solve Your`s equation.
+- Help - Помощь
+- Test - Проверить работу программы юнит-тестами
+- Put  - Ввести собственные значения для решения!
 
-__Thanks for using our program!__
+
+__Спасибо, что пользуетесь нашей программой!__

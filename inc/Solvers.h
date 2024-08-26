@@ -5,10 +5,10 @@
 
 #include <stdio.h>
 #include <math.h>
-#include <assert.h>
 
 #include "Utils.h"
 #include "InputOutput.h"
+#include "Errors.h"
 
 struct Coefficient                                                                  ///< Coefficients
 {

@@ -27,11 +27,11 @@ void RunSolver ()
 
 void Dispatcher (struct Coefficient parameters, struct Roots* decision)
 {
-    assert (isfinite (parameters.a));
-    assert (isfinite (parameters.b));
-    assert (isfinite (parameters.c));
+    my_assert (isfinite (parameters.a));
+    my_assert (isfinite (parameters.b));
+    my_assert (isfinite (parameters.c));
 
-    assert (decision != NULL);
+    my_assert (decision != NULL);
 
     if (IsZero (parameters.a))
         LineSolver (parameters.b, parameters.c, decision);
@@ -48,10 +48,10 @@ void Dispatcher (struct Coefficient parameters, struct Roots* decision)
 
 void LineSolver (double b, double c, struct Roots* decision)
 {
-    assert (isfinite (b));
-    assert (isfinite (c));
+    my_assert (isfinite (b));
+    my_assert (isfinite (c));
 
-    assert (decision != NULL);
+    my_assert (decision != NULL);
 
     if (IsZero (b)) 
     {                                    
@@ -82,11 +82,11 @@ void LineSolver (double b, double c, struct Roots* decision)
 
 void SquareSolver (struct Coefficient parameters, struct Roots* decision)                    // Returns the number of roots
 {
-    assert (isfinite (parameters.a));
-    assert (isfinite (parameters.b));
-    assert (isfinite (parameters.c));
+    my_assert (isfinite (parameters.a));
+    my_assert (isfinite (parameters.b));
+    my_assert (isfinite (parameters.c));
 
-    assert (decision != NULL);
+    my_assert (decision != NULL);
 
     if (IsZero (parameters.c))                                                               // If c == 0
     {

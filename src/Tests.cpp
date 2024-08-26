@@ -12,13 +12,15 @@
 
 int UniversalTest (int testNum, struct Coefficient parameters, struct Roots decision)
 {
-    assert (testNum >= 0);
-    assert (isfinite (parameters.a));
-    assert (isfinite (parameters.b));
-    assert (isfinite (parameters.c));
-    assert (decision.nRoots >= -1);    
-    assert (isfinite (decision.x1));    
-    assert (isfinite (decision.x2));    
+    my_assert (testNum >= 0);
+    
+    my_assert (isfinite (parameters.a));
+    my_assert (isfinite (parameters.b));
+    my_assert (isfinite (parameters.c));
+
+    my_assert (decision.nRoots >= -1);    
+    my_assert (isfinite (decision.x1));    
+    my_assert (isfinite (decision.x2));    
 
     TestConst expected = {decision.nRoots, decision.x1, decision.x2};
 
@@ -50,6 +52,8 @@ void StartTests()                                                               
 {
     int rightTests = 0;
     int falseTests = 6;
+
+    FILE* TestData;
 
     TestRes data[QUANTITY] = 
     {   // a       b       c        x1     x2  nRoots

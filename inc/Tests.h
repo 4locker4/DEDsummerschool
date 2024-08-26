@@ -6,10 +6,10 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
-#include <assert.h>
 
 #include "Solvers.h"
 #include "Utils.h"
+#include "Errors.h"
 
 const int QUANTITY = 6;                                                                         ///< Size of array with tests
 const int HOWTEST  = 5;                                                                         ///< Numbers of tests

@@ -10,7 +10,7 @@
 
 bool IsZero (double val)                                                            // Checking double for errors
 {
-    assert (isfinite (val));
+    my_assert (isfinite (val));
 
     if (EPSILON >= fabs (val))
         return true;
@@ -26,8 +26,8 @@ bool IsZero (double val)                                                        
 
 bool DoubleComparison (double firstNum, double secondNum)                           // Compare two double
 {
-    assert (isfinite (firstNum));
-    assert (isfinite (secondNum));
+    my_assert (isfinite (firstNum));
+    my_assert (isfinite (secondNum));
 
     return IsZero (firstNum - secondNum);
 }

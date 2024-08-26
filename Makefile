@@ -9,7 +9,7 @@ flags = -c -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-e
 		-Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits 	\
 		-Wwrite-strings -Werror=vla -D_DEBUG -D_EJUDGE_CLIENT_SIDE
 
-includes = ./inc/InputOutput.h ./inc/Menu.h ./inc/Solvers.h ./inc/Tests.h ./inc/Utils.h
+includes = ./inc/InputOutput.h ./inc/Menu.h ./inc/Solvers.h ./inc/Tests.h ./inc/Utils.h ./inc/Errors.h
 
 sources = ./src/main.cpp ./src/Menu.cpp ./src/Solvers.cpp ./src/InputOutput.cpp ./src/Tests.cpp ./src/Utils.cpp
 

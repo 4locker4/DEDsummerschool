@@ -4,11 +4,11 @@
 #define UTILS_H
 
 #include <stdio.h>
-#include <assert.h>
 #include <math.h>
 #include <string.h>
 
 #include "Solvers.h"
+#include "Errors.h"
 
 #define RESET   "\x1b[0m"
 #define RED     "\x1b[31m"

@@ -11,7 +11,7 @@
 
 void Inputer (struct Coefficient* parameters)                                        // Data entry
 {
-    assert (parameters != NULL);
+    my_assert (parameters != NULL);
 
     YELLOW_PRINT ("Your equation is:\na * x ^ 2 + b * x + c\n");
     YELLOW_PRINT ("Enter the coefficients of the equation.\n\n");
@@ -45,8 +45,8 @@ void Inputer (struct Coefficient* parameters)                                   
 
 void Outputer (struct Roots decision)                                               // Data output
 {
-    assert (isfinite (decision.x1));
-    assert (isfinite (decision.x2));
+    my_assert (isfinite (decision.x1));
+    my_assert (isfinite (decision.x2));
 
     switch (decision.nRoots)
     {
