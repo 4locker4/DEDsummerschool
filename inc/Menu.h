@@ -20,8 +20,8 @@ enum UsersChoise
     HELP = 'h'                                                                          ///< To take help
 };
 
-void Menu          (int argc, char* argv[]);                                            ///< Choose, what User want`s to do (No parameters)
-int  GetFlags      (int argc, char* str);                                               ///< argv flags
+void Menu          (const int argc, const char* argv[]);                                ///< Choose, what User want`s to do (No parameters)
+int  GetFlags      (const int argc, const char* str);                                   ///< argv flags
 void HelpList      ();                                                                  ///< Help-list
 
 #endif // MENU_H

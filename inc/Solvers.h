@@ -34,9 +34,9 @@ enum spectrum
 
 const double EPSILON = 1e-10;                                                       ///< Error constant double
 
-void Dispatcher   (struct Coefficient parameters, struct Roots* docision);          ///< Distributor for linear and quadratic equations
-void LineSolver   (double b, double c, struct Roots* dicision);                     ///< Solve linear equations
-void SquareSolver (struct Coefficient parameters, struct Roots* docision);          ///< Solving a quadratic equation    
+void Dispatcher   (const struct Coefficient* parameters, struct Roots* decision);   ///< Distributor for linear and quadratic equations
+void LineSolver   (const double b, const double c, struct Roots* decision);         ///< Solve linear equations
+void SquareSolver (const struct Coefficient* parameters, struct Roots* decision);   ///< Solving a quadratic equation    
 void RunSolver    ();                                                               ///< Start soling
 
 #endif // SOLVERS_H

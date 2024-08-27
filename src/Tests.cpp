@@ -10,37 +10,39 @@
  * \param [out] return      Is test right or not (true/false)
  */
 
-int UniversalTest (int testNum, struct Coefficient parameters, struct Roots decision)
+int UniversalTest (const int testNum, const TestData* data)
 {
     my_assert (testNum >= 0);
     
-    my_assert (isfinite (parameters.a));
-    my_assert (isfinite (parameters.b));
-    my_assert (isfinite (parameters.c));
+    my_assert (data != NULL);
 
-    my_assert (decision.nRoots >= -1);    
-    my_assert (isfinite (decision.x1));    
-    my_assert (isfinite (decision.x2));    
+    my_assert (isfinite (data->parameters.a));
+    my_assert (isfinite (data->parameters.b));
+    my_assert (isfinite (data->parameters.c));
 
-    TestConst expected = {decision.nRoots, decision.x1, decision.x2};
+    my_assert (data->decision.nRoots >= -1);    
+    my_assert (isfinite (data->decision.x1));    
+    my_assert (isfinite (data->decision.x2));    
 
-    Dispatcher (parameters, &decision);
+    Roots results = {data->decision.x1, data->decision.x2, data->decision.nRoots};
 
-    if (expected.nRoots != decision.nRoots ||
-        !DoubleComparison (expected.x1Required, decision.x1) ||
-        !DoubleComparison (expected.x2Required, decision.x2))
+    Dispatcher (&data->parameters, &results);
+
+    if (results.nRoots == data->decision.nRoots &&
+        DoubleComparison (results.x1, data->decision.x1) &&
+        DoubleComparison (results.x2, data->decision.x2))
     {
-        RED_PRINT ("\nERROR, Test number %d\n", testNum);
-        RED_PRINT ("Input Data: a = %lg, b = %lg, c = %lg\n", parameters.a, parameters.b, parameters.c);
-        RED_PRINT ("Expacted Data: x1 = %lg, x2 = %lg, nRoots = %d\n", expected.x1Required, expected.x2Required, expected.nRoots);
-        RED_PRINT ("Received Data: x1 = %lg, x2 = %lg, nRoots = %d\n\n", decision.x1, decision.x2, decision.nRoots);
-
-        return 0;
+        COLOR_PRINT (GREEN, "Nice! Test number %d is fine!\n", testNum);
+        return 1;   
     }
     else
     {
-        GREEN_PRINT ("Nice! Test number %d is fine!\n", testNum);
-        return 1;
+        COLOR_PRINT (RED, "\nERROR, Test number %d\n", testNum);
+        COLOR_PRINT (RED, "Input Data:     a = %lg,  b = %lg, c      = %lg\n", data->parameters.a, data->parameters.b, data->parameters.c);
+        COLOR_PRINT (RED, "Expacted Data: x1 = %lg, x2 = %lg, nRoots = %d\n", data->decision.x1, data->decision.x2, data->decision.nRoots);
+        COLOR_PRINT (RED, "Received Data: x1 = %lg, x2 = %lg, nRoots = %d\n\n", results.x1, results.x2, results.nRoots);
+
+        return 0;
     }
 }
 
@@ -53,11 +55,9 @@ void StartTests()                                                               
     int rightTests = 0;
     int falseTests = 6;
 
-    FILE* TestData;
-
-    TestRes data[QUANTITY] = 
-    {   // a       b       c        x1     x2  nRoots
-        {{ 1,      2,     -3   }, { 0,    -3,   2}},
+    TestData data[QUANTITY] = 
+    {   // a       b       c       x1     x2  nRoots
+        {{ 1,      2,     -2   }, { 1,    -3,   2}},
         {{ 5,      0,      0   }, { 0,     0,   1}},
         {{ 0,      5,     -3   }, { 0.6,   0.6, 1}},
         {{ 0.25, -25,      0   }, { 0,     100, 2}},
@@ -67,11 +67,11 @@ void StartTests()                                                               
 
     for (int testNum = 0; testNum <= HOWTEST; testNum++)
     {
-        rightTests += UniversalTest (testNum, data[testNum].parameters, data[testNum].decision);
+        rightTests += UniversalTest (testNum, &data[testNum]);
     }
 
-    GREEN_PRINT ("\n"
-            "There are/is %d right test(s).\n", rightTests);
+    COLOR_PRINT (GREEN, "\n"
+                "There are/is %d right test(s).\n", rightTests);
  
-    RED_PRINT ("There are/is %d wrong test(s).\n", (falseTests - rightTests));
+    COLOR_PRINT (RED, "There are/is %d wrong test(s).\n", (falseTests - rightTests));
 }

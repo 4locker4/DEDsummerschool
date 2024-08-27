@@ -6,11 +6,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <ctype.h>
 
 #include "Errors.h"
 #include "Solvers.h"
      
-void Outputer (struct Roots decision);                                                 ///< Data output
-void Inputer  (struct Coefficient* parameters) ;                                       ///< Data entry       
+void Outputer (const struct Roots* decision);                                                 ///< Data output
+void Inputer  (struct Coefficient* parameters) ;                                              ///< Data entry       
 
 #endif

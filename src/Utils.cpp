@@ -8,7 +8,7 @@
  * \param [out] return Return is this doouble == 0
  */
 
-bool IsZero (double val)                                                            // Checking double for errors
+bool IsZero (const double val)                                                            // Checking double for errors
 {
     my_assert (isfinite (val));
 
@@ -24,7 +24,7 @@ bool IsZero (double val)                                                        
  * \param [out] true/false Is this true or false
  */
 
-bool DoubleComparison (double firstNum, double secondNum)                           // Compare two double
+bool DoubleComparison (const double firstNum, const double secondNum)                           // Compare two double
 {
     my_assert (isfinite (firstNum));
     my_assert (isfinite (secondNum));
@@ -41,4 +41,18 @@ void BufferCleaner ()                                                           
     int ch = 0;
 
     while ((ch = getchar ()) != '\n' && ch != EOF) {}
+}
+
+/**
+ * @brief Function, which skips spaces after User`s text and returns first not-space char
+ * \param [out] lastChar Returns first char
+ */
+
+int SkipSpaces ()
+{
+    int isSpace = 0;
+
+    while ((isSpace = getchar()) == ' ' || isSpace == '\t') {}
+    
+    return isSpace;
 }

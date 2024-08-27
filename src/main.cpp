@@ -8,7 +8,7 @@
  * \param [in] argv Flags from User1s input
  */
 
-int main (int argc, char* argv[])
+int main (const int argc, const char* argv[]) // const
 {
     Menu (argc, argv);
 

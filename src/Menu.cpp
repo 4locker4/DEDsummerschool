@@ -8,7 +8,7 @@
  * \param [in] argv User1s flags
  */
 
-void Menu (int argc, char* argv[])
+void Menu (const int argc, const char* argv[])
 {
     my_assert (argc >= 1);
     my_assert (argv != NULL);
@@ -38,13 +38,13 @@ void Menu (int argc, char* argv[])
             }
             case ERROR:
             {
-                RED_PRINT ("Please, enter only one flag.\n");
+                COLOR_PRINT (RED, "Please, enter only one flag.\n");
                 break;
             }
 
             default:
             {
-                RED_PRINT ("You entered something wrong. Be careful.");
+                COLOR_PRINT (RED, "You entered something wrong. Be careful.");
                 break;
             }
         }
@@ -58,7 +58,7 @@ void Menu (int argc, char* argv[])
  * \param [out] const What flag User entered
  */
 
-int GetFlags (int argc, char* str)
+int GetFlags (const int argc, const char* str)
 {
     my_assert (argc > 0);
     my_assert (str != NULL);
@@ -74,7 +74,7 @@ int GetFlags (int argc, char* str)
     {   
         return str[SYMB];
     }
-    else if (lenStr <= 6)
+    else
     {
         if (strcmp (str, "--test") == 0)
         {
@@ -92,10 +92,6 @@ int GetFlags (int argc, char* str)
         {
             return ERROR;
         }
-    }
-    else
-    {
-        return ERROR;
     }
 }
 

@@ -15,24 +15,12 @@
 #define GREEN   "\x1b[32m"
 #define YELLOW  "\x1b[33m"
 
-#define RED_PRINT(...)\
-    printf (RED);\
-    printf (__VA_ARGS__);\
-    printf (RESET)
+#define COLOR_PRINT(color, ...) printf (color); printf(__VA_ARGS__); printf(RESET);
 
-#define GREEN_PRINT(...)\
-    printf (GREEN);\
-    printf (__VA_ARGS__);\
-    printf (RESET)
-
-#define YELLOW_PRINT(...)\
-    printf (YELLOW);\
-    printf (__VA_ARGS__);\
-    printf (RESET);
-
-bool IsZero             (double val);                                               ///< Double error check
-bool DoubleComparison   (double firstNum, double secondNum);                        ///< Checking equality double
+bool IsZero             (const double val);                                         ///< Double error check
+bool DoubleComparison   (const double firstNum, const double secondNum);            ///< Checking equality double
 void BufferCleaner      ();                                                         ///< Buffer cleaner
+int  SkipSpaces         ();                                                         ///< Skip spaces and tabs after User`s text, returns first char
 
 #endif
 

@@ -9,28 +9,30 @@
  * \param [in] c Free term of the equation
  */
 
-void Inputer (struct Coefficient* parameters)                                        // Data entry
+void Inputer (struct Coefficient* parameters)                                       // Data entry
 {
     my_assert (parameters != NULL);
 
-    YELLOW_PRINT ("Your equation is:\na * x ^ 2 + b * x + c\n");
-    YELLOW_PRINT ("Enter the coefficients of the equation.\n\n");
-    YELLOW_PRINT ("A   B   C\n");
+    COLOR_PRINT (YELLOW, "Your equation is:\na * x ^ 2 + b * x + c\n");
+    COLOR_PRINT (YELLOW, "Enter the coefficients of the equation.\n\n");
+    COLOR_PRINT (YELLOW, "A   B   C\n");
 
     while (scanf ("%lg %lg %lg", &parameters -> a,                                  // Check, what kind of data User input
                                  &parameters -> b,
                                  &parameters -> c) != 3)                                  
     {   
-        RED_PRINT ("Oh no! You entered incorrect data.\n");
-        RED_PRINT ("Please, put coefficients, not chars.\n");
+        COLOR_PRINT (RED, "Oh no! You entered incorrect data.\n");
+        COLOR_PRINT (RED, "Please, put coefficients, not chars.\n");
 
         BufferCleaner();                                                            // Clean Buffer
     }
-    char ch = 0;
+    
+    int ch = 0;
 
-    if ((ch = getchar()) != '/n')
+    if ((ch = SkipSpaces()) != '\n' && ch != EOF)                                   // Сhecks characters after entered values
     {
-        YELLOW_PRINT ("\nYou entered some more symbols, that`s not good, but ok.\n\n")
+        COLOR_PRINT (YELLOW, "\nYou entered some more symbols, that`s not good, but ok.\n\n");
+        BufferCleaner();
     }
 
     return;
@@ -43,37 +45,39 @@ void Inputer (struct Coefficient* parameters)                                   
  * \param [in] x2            Second root of the equation
  */
 
-void Outputer (struct Roots decision)                                               // Data output
-{
-    my_assert (isfinite (decision.x1));
-    my_assert (isfinite (decision.x2));
+void Outputer (const struct Roots* decision)                                        // Data output
+{   
+    my_assert (decision != NULL);
 
-    switch (decision.nRoots)
+    my_assert (isfinite (decision->x1));
+    my_assert (isfinite (decision->x2));
+
+    switch (decision->nRoots)
     {
         case ZERO_ROOTS:                                                            // If there are no roots
         {
-            YELLOW_PRINT ("No roots!");
+            COLOR_PRINT (RED, "No roots!");
             break;
         }
         case ONE_ROOT:                                                              // One root
         {
-            YELLOW_PRINT ("x = %g", decision.x1);
+            COLOR_PRINT (YELLOW, "x = %g", decision->x1);
             break;
         }
         case TWO_ROOTS:                                                             // Two roots
         {
-            YELLOW_PRINT ("x1 = %lg, x2 = %lg", decision.x1, decision.x2);
+            COLOR_PRINT (GREEN, "x1 = %lg, x2 = %lg", decision->x1, decision->x2);
             break;
         }
         case SS_INFINITY_ROOTS:                                                     // Infinite number of roots
         {
-            YELLOW_PRINT ("Infinity roots.");
+            COLOR_PRINT (RED, "Infinity roots.");
             break;
         }
 
         default:                                                                    // Something went wrong; no roots like 0/1/2/INF
         {
-            RED_PRINT ("main (): ERROR, there is %d roots://", decision.nRoots);
+            COLOR_PRINT (RED, "main (): ERROR, there is %d roots://", decision->nRoots);
             break;
         }
     }
