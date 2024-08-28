@@ -21,7 +21,7 @@ struct Roots                                                                    
 {
     double x1;                                                                      ///< First root
     double x2;                                                                      ///< Second root
-    int nRoots;                                                                     ///< Number of roots
+    int    nRoots;                                                                  ///< Number of roots
 };
 
 enum spectrum 
@@ -31,8 +31,6 @@ enum spectrum
     TWO_ROOTS,                                                                      ///< Number of equation roots: 2
     SS_INFINITY_ROOTS = -1                                                          ///< Number of equation roots: 0 INFINITY
 };
-
-const double EPSILON = 1e-10;                                                       ///< Error constant double
 
 void Dispatcher   (const struct Coefficient* parameters, struct Roots* decision);   ///< Distributor for linear and quadratic equations
 void LineSolver   (const double b, const double c, struct Roots* decision);         ///< Solve linear equations

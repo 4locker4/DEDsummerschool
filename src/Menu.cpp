@@ -10,8 +10,8 @@
 
 void Menu (const int argc, const char* argv[])
 {
-    my_assert (argc >= 1);
     my_assert (argv != NULL);
+    my_assert (argc >= 1);
 
     if (argc == 1)
     {
@@ -60,10 +60,10 @@ void Menu (const int argc, const char* argv[])
 
 int GetFlags (const int argc, const char* str)
 {
-    my_assert (argc > 0);
     my_assert (str != NULL);
+    my_assert (argc > 0);
 
-    int lenStr = strlen(str); 
+    int lenStr = strlen (str); 
 
     if (argc > 2)
     {
@@ -101,7 +101,7 @@ int GetFlags (const int argc, const char* str)
 
 void HelpList ()
 {
-    printf ("This program solve`s quadratic equations.\nFor more infomation watch README.md\n\n");
+    printf ("\nThis program solve`s quadratic equations.\nFor more infomation watch README.md\n\n");
     printf ("--test (-t) - For  test program\n\n");
     printf ("--put (-p) - For put Your values\n\n");
     printf ("--help (-h) - For help-list\n\n");

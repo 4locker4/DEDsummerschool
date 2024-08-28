@@ -1,4 +1,4 @@
-/// @file main.h
+/// @file Menu.h
 
 #ifndef MENU_H
 #define MENU_H
@@ -15,9 +15,9 @@ const int SYMB = 1;                                                             
 enum UsersChoise
 {
     ERROR = -1,                                                                         ///< If user enter something  wrong
-    PUT = 'p',                                                                          ///< To put Your values
-    TEST = 't',                                                                         ///< To start tests
-    HELP = 'h'                                                                          ///< To take help
+    PUT   = 'p',                                                                        ///< To put Your values
+    TEST  = 't',                                                                        ///< To start tests
+    HELP  = 'h'                                                                         ///< To take help
 };
 
 void Menu          (const int argc, const char* argv[]);                                ///< Choose, what User want`s to do (No parameters)

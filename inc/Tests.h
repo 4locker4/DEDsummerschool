@@ -11,8 +11,8 @@
 #include "Utils.h"
 #include "Errors.h"
 
-const int QUANTITY = 6;                                                                                 ///< Size of array with tests
-const int HOWTEST  = 5;                                                                                 ///< Numbers of tests
+const int QUANTITY        = 6;                                                                          ///< Size of array with tests
+const int HOW_MANY_TESTS  = 5;                                                                          ///< Numbers of tests
 
 struct TestData
 {
@@ -21,7 +21,7 @@ struct TestData
 };
 
 void StartTests         ();                                                                             ///< Start solving equation
-int  UniversalTest      (const int testNum, const struct TestData* data);      ///< Function for unit tests
+int  UniversalTest      (const int testNum, const struct TestData* data);                               ///< Function for unit tests
 
 #endif ///TESTS_H
 

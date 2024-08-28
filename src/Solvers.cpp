@@ -11,7 +11,7 @@ void RunSolver ()
     Coefficient parameters {};
     Roots decision {};
 
-    Inputer (&parameters);                                                                  // Gets equation coefficients
+    Inputer (&parameters);                                                                   // Gets equation coefficients
 
     Dispatcher (&parameters, &decision);                                                     // Solve the equation
 
@@ -27,12 +27,13 @@ void RunSolver ()
 
 void Dispatcher (const struct Coefficient* parameters, struct Roots* decision)
 {
+    my_assert (parameters != NULL);
+    my_assert (decision   != NULL);
+    
     my_assert (isfinite (parameters->a));
     my_assert (isfinite (parameters->b));
     my_assert (isfinite (parameters->c));
 
-    my_assert (parameters != NULL);
-    my_assert (decision   != NULL);
 
     if (IsZero (parameters->a))
     {
@@ -68,17 +69,16 @@ void LineSolver (const double b, const double c, struct Roots* decision)
         {
             decision->nRoots = ZERO_ROOTS;
         }
-
         return;
     }
     else                                                                              
     {
-        if (IsZero (-c / b))
+        if (IsZero (-c / b))                                                                    // If x1 = x2 = 0    
         {
             decision->x1 = decision->x2 = 0;
             decision->nRoots = ONE_ROOT;
         }
-        else
+        else                                                                                    // If the equation is linear
         {
             decision->x1 = decision->x2 = (-c / b);
             decision->nRoots = ONE_ROOT;
@@ -110,6 +110,7 @@ void SquareSolver (const struct Coefficient* parameters, struct Roots* decision)
             decision->nRoots = ONE_ROOT;
             return;
         }
+
         decision->x1 = 0;
         decision->x2 = (-parameters->b / parameters->a);
        

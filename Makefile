@@ -23,7 +23,7 @@ $(execute): $(objects)
 	$(compiler) $(objects) -o $@
 
 .cpp.o: $(includes)
-	$(compiler) $(flags) $< -o $@
+	@$(compiler) $(flags) $< -o $@
 
 clean:
 	rm -rf ./src/*.o
