@@ -5,7 +5,7 @@
 /**
  * @brief Links: Menu ()
  * \param [in] argc Quantity of flags
- * \param [in] argv Flags from User1s input
+ * \param [in] argv Flags from User`s input
  */
 
 int main (const int argc, const char* argv[])

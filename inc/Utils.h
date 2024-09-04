@@ -14,7 +14,7 @@
 #define GREEN   "\x1b[32m"
 #define YELLOW  "\x1b[33m"
 
-#define COLOR_PRINT(color, ...) printf (color __VA_ARGS__); printf (RESET);         ///< Colorful print
+#define COLOR_PRINT(color, ...)  { printf (color __VA_ARGS__); printf (RESET); }    ///< Colorful print
 
 const double EPSILON = 1e-10;                                                       ///< Error constant double
 
@@ -23,7 +23,7 @@ bool DoubleComparison   (const double firstNum, const double secondNum);        
 void BufferCleaner      ();                                                         ///< Buffer cleaner
 bool SkipSpaces         ();                                                         ///< Skip spaces and tabs after User`s text, returns first char
 void FileOpener         (int argc, char * argv[]);                                  ///< Open User`s file
-int  StrCounter         (int * fileFirstElement, int fileSize);                     ///< Count quantity of tests
+int  StrCounter         (int * fileFirstElement);                     ///< Count quantity of tests
 void TestArrayReturner  (int fileSize, char * fileFirstElement);                    ///< Put values into array of struct (test data array)
 
 #endif ///UTILS_H

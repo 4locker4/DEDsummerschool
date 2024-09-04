@@ -1,11 +1,16 @@
-///@file Errors.h
+/// @file Errors.h
 
 #ifndef ERRORS_H
 #define ERRORS_H
 
-#include  <stdlib.h>
+#include <stdlib.h>
 
 #include "Utils.h"
+
+/**
+ * @brief My assert macro
+ * \param [in] expr The expression for assert
+ */
 
 #define my_assert(expr) if (!(expr))\
                         {\

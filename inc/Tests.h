@@ -6,6 +6,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <sys/stat.h>
 
 #include "Solvers.h"
 #include "Utils.h"
@@ -20,8 +21,11 @@ struct TestData
     struct Roots       decision;                                                                        ///< Roots      
 };
 
-void StartTests         ();                                                                             ///< Start solving equation
-int  UniversalTest      (const int testNum, const struct TestData* data);                               ///< Function for unit tests
+void StartTests      (int argc, const char argv[]);                                                     ///< Start solving equation
+int  UniversalTest   (const int testNum, struct TestData arrayOfInd);                                 ///< Function for unit tests
+char * FileOpeners     (int argc, char argv[]);
+TestData * FillingTheArray (char * fileFirstElement);
+FILE* FileNameReader (int argc, char argv[]);
 
 #endif ///TESTS_H
 

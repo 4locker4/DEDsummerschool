@@ -23,7 +23,7 @@ void Menu (const int argc, const char* argv[])
         {
             case TEST: 
             {
-                StartTests ();
+                StartTests (argc, *argv);
                 break;
             }
             case PUT:
